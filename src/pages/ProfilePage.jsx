@@ -64,7 +64,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                           user && user.photo
                             ? user.photo.startsWith('https://')
                               ? user.photo
-                              : `http://localhost:8000/userPhoto/${user.photo}` 
+                              : `https://www.airbnb-server.felixdev.com.ng/userPhoto/${user.photo}` 
                                : 'images/svgexport-7.svg'
                         }
                         alt="userIcon"
@@ -120,7 +120,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                         fetchOrders.sort((a,b)=>new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()).map((order,idx)=>(
                         <div key={idx} className='flex my-2  gap-2 p-2 border border-primary rounded-lg'>
                           <div className='flex '>
-                           <img className='object-cover' src={`http://localhost:8000/uploads/`+order.orderPhoto} alt="orderImage" width={70} height={30} />
+                           <img className='object-cover' src={`https://www.airbnb-server.felixdev.com.ng/uploads/`+order.orderPhoto} alt="orderImage" width={70} height={30} />
                           </div>
                            <div className='grow'>
                            <p>{order.bookingPlace}</p>

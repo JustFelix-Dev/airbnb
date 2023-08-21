@@ -69,7 +69,7 @@ const Header = () => {
                           user && user.photo
                             ? user.photo.startsWith('https://')
                               ? user.photo
-                              : `http://localhost:8000/userPhoto/${user.photo}` 
+                              : `https://www.airbnb-server.felixdev.com.ng/userPhoto/${user.photo}` 
                                : '/images/svgexport-7.svg'
                         }
                         alt="userIcon"

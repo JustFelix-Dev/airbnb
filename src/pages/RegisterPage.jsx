@@ -28,10 +28,10 @@ const RegisterPage = () => {
 
   const handleGoogle = ()=>{
     setIsLoading(true)
-    window.open('http://localhost:8000/auth/google','_self')
+    window.open('https://www.airbnb.felixdev.com.ng/auth/google','_self')
 }
 const handleGithub = ()=>{
-    window.open('http://localhost:8000/auth/github','_self')
+    window.open('https://www.airbnb.felixdev.com.ng/auth/github','_self')
 }
 const uploadPhoto = (e) => {
   e.preventDefault();
@@ -120,7 +120,7 @@ const uploadPhoto = (e) => {
                       <input type="file" accept='.jpg , .png' className='hidden' onChange={uploadPhoto} required/>
                       {
                       photo && photo.length > 0 ? 
-                          <img src={"http://localhost:8000/userPhoto/" + photo} alt="userPhoto" width={30} height={30} style={{borderRadius:'10px'}} />
+                          <img src={"https://www.airbnb-server.felixdev.com.ng/userPhoto/" + photo} alt="userPhoto" width={30} height={30} style={{borderRadius:'10px'}} />
                          : <><SlCloudUpload/>Upload</>
                       }
                         </label>
