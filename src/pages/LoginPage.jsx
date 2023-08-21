@@ -23,10 +23,10 @@ const LoginPage = () => {
     }
 
     const handleGoogle = ()=>{
-      window.open('https://www.airbnb.felixdev.com.ng/auth/google','_self')
+      window.open('https://www.airbnb-server.felixdev.com.ng/auth/google','_self')
   }
   const handleGithub = ()=>{
-      window.open('https://www.airbnb.felixdev.com.ng/auth/github','_self')
+      window.open('https://www.airbnb-server.felixdev.com.ng/auth/github','_self')
   }
    
     const handleForm=async(e)=>{
