@@ -39,7 +39,7 @@ function App() {
             console.log(err)
         }
     }
-    fetchProfile()
+    fetchProfile();
   },[user])
   
   return (
