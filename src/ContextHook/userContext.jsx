@@ -33,6 +33,7 @@ export function UserContextProvider({children}){
             .then((resObject) => {
               console.log(resObject.user)
               setUser(resObject.user);
+              
             })
             .catch((err) => {
               console.log(err);
