@@ -25,7 +25,7 @@ export function UserContextProvider({children}){
 
       useEffect(() => {
         const getUser = () => {
-         axios.get('/auth/login/success').then((resObject) => {
+         axios.get('/auth/login/success').then( resObject =>{
               console.log(resObject.user)
               setUser(resObject.user);
             })

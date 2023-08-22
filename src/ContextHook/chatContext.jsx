@@ -23,7 +23,7 @@ export const ChatContextProvider=({children,user})=>{
 
     // Initial Socket
     useEffect(()=>{
-        const newSocket = io("http://localhost:3000");
+        const newSocket = io("https://www.airbnb-socket.felixdev.com.ng");
         setSocket(newSocket);
 
         return()=>{
