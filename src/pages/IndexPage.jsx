@@ -21,8 +21,6 @@ const IndexPage = () => {
         }
       },[])
 
-      console.log("RenderOnce:", renderOnce )
-
       const placesVariants = {
           hidden: {opacity:0},
           visible: {opacity:1, 
