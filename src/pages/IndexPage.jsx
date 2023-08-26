@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { PlaceContext } from '../ContextHook/placeContext';
 import 'react-loading-skeleton/dist/skeleton.css';
 import Skeleton from 'react-loading-skeleton';
+import Loader from '../components/Loader';
 
 
 const IndexPage = () => {
@@ -14,8 +15,8 @@ const IndexPage = () => {
       console.log("Loading:",loading)
   return (
          <>
-           <div className="mt-8 grid max-w-8xl pt-4 px-12 gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {  loading ? <Skeleton className='h-32 w-32'/> :
+          { !loading ? <Loader/> : <div className="mt-8 grid max-w-8xl pt-4 px-12 gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {
           allPlaces?.length > 0 && allPlaces.map((place,idx) => (
             <Link key={idx} to={'/place/'+place._id}>
           <div className="bg-gray-500 mb-2 rounded-2xl flex">
@@ -31,7 +32,7 @@ const IndexPage = () => {
         </Link>
       ))
       }
-    </div>
+            </div>}
          </>
   )
 }

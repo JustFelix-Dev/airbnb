@@ -19,7 +19,6 @@ export function UserContextProvider({children}){
             catch(err){
                 console.log(err)
             }
-            setLoading(false)
         }
         fetchProfile()
       },[user])
