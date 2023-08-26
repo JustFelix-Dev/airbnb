@@ -10,10 +10,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const IndexPage = () => {
       const { allPlaces,error,loading } = useContext(PlaceContext);
-      const [ renderOnce,setRenderOnce] = useState(false);
+      const [ renderOnce,setRenderOnce] = useState(true);
 
       useEffect(()=>{
-       setRenderOnce(true)
+        if(renderOnce){
+          setRenderOnce(false)
+        }
       },[])
 
       const placesVariants = {
