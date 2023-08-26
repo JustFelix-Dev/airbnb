@@ -5,7 +5,6 @@ export const userContext = createContext({});
 
 export function UserContextProvider({children}){
       const [ user,setUser ] = useState(null)
-      const [ loading,setLoading ] = useState(true);
       const [ ready,setReady ] = useState(false)
 
       useEffect(()=>{
@@ -15,7 +14,6 @@ export function UserContextProvider({children}){
                const res = await axios.get('/profile')
                     setUser(res.data)
                     setReady(true)
-                    setLoading(false)
             }
             }
             catch(err){
@@ -28,7 +26,7 @@ export function UserContextProvider({children}){
 
      
    return (
-          <userContext.Provider value={{user,setUser,ready,loading}}>
+          <userContext.Provider value={{user,setUser,ready}}>
               {children}
           </userContext.Provider>
    );
