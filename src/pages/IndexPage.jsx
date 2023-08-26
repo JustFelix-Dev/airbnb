@@ -11,7 +11,7 @@ const IndexPage = () => {
       
       console.log(allPlaces)
       console.log(error)
-      console.log(loading)
+      console.log("Loading:",loading)
   return (
          <>
            <div className="mt-8 grid max-w-8xl pt-4 px-12 gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
