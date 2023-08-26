@@ -2,8 +2,8 @@ import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PlaceContext } from '../ContextHook/placeContext';
-import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import Skeleton from 'react-loading-skeleton';
 
 
 const IndexPage = () => {
