@@ -2,10 +2,12 @@ import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PlaceContext } from '../ContextHook/placeContext';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 
 const IndexPage = () => {
-      const { allPlaces,error } = useContext(PlaceContext);
+      const { allPlaces,error,loading} = useContext(PlaceContext);
       
       console.log(allPlaces)
       console.log(error)
@@ -17,7 +19,7 @@ const IndexPage = () => {
          <Link key={idx} to={'/place/'+place._id}>
           <div className="bg-gray-500 mb-2 rounded-2xl flex">
             {place.photos?.[0] && (
-              <img className="rounded-xl object-cover aspect-square " src={'https://www.airbnb-server.felixdev.com.ng/uploads/'+place.photos?.[0]} alt=""/>
+              <img className="rounded-xl object-cover aspect-square " src={'https://www.airbnb-server.felixdev.com.ng/uploads/'+place.photos?.[0]} alt=""/> || <Skeleton/>
             )}
           </div>
           <h2 className="font-bold truncate">{place.address}</h2>

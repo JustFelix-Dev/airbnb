@@ -5,6 +5,7 @@ export const userContext = createContext({});
 
 export function UserContextProvider({children}){
       const [ user,setUser ] = useState(null)
+      const [ loading,setLoading ] = useState(true);
       const [ ready,setReady ] = useState(false)
 
       useEffect(()=>{
@@ -14,29 +15,20 @@ export function UserContextProvider({children}){
                const res = await axios.get('/profile')
                     setUser(res.data)
                     setReady(true)
+                    setLoading(false)
             }
             }
             catch(err){
                 console.log(err)
             }
+            setLoading(false)
         }
         fetchProfile()
       },[user])
 
-      useEffect(() => {
-        const getUser = () => {
-         axios.get('/auth/login/success').then( resObject =>{
-              console.log(resObject.user)
-              setUser(resObject.user);
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        };
-        getUser();
-      }, []);
+     
    return (
-          <userContext.Provider value={{user,setUser,ready}}>
+          <userContext.Provider value={{user,setUser,ready,loading}}>
               {children}
           </userContext.Provider>
    );
