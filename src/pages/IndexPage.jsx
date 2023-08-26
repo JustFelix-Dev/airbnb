@@ -15,7 +15,7 @@ const IndexPage = () => {
       console.log("Loading:",loading)
   return (
          <>
-          { !loading ? <Loader/> : <div className="mt-8 grid max-w-8xl pt-4 px-12 gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          { loading ? <Loader/> : <div className="mt-8 grid max-w-8xl pt-4 px-12 gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {
           allPlaces?.length > 0 && allPlaces.map((place,idx) => (
             <Link key={idx} to={'/place/'+place._id}>
