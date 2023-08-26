@@ -24,7 +24,7 @@ const IndexPage = () => {
          </AnimatePresence>  
 
          { !loading &&
-          ( <motion.div  initial={{opacity:0}} animate={{opacity:1}} transition={{delay:3,staggerChildren:0.5}} className="mt-8 grid max-w-8xl pt-4 px-12 gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          ( <motion.div  initial={{opacity:0}} animate={{opacity:1}} transition={{delay:3, when:"beforeChildren",staggerChildren:2}} className="mt-8 grid max-w-8xl pt-4 px-12 gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {
           allPlaces?.length > 0 && allPlaces.map((place,idx) => (
             <motion.div initial={{scale:0.7,opacity:0.8}} animate={{scale:1,opacity:1}} transition={{duration:1}}>
