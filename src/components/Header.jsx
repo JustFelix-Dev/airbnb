@@ -86,9 +86,9 @@ const Header = () => {
               </Link>
              </div>
          </header>
-              <AnimatePresence mode='wait'> 
+              <AnimatePresence mode='popLayout'> 
                 { path?.pathname === '/' && showSearch && (
-              <motion.div exit={{opacity:0}} initial={{translateY:-100,opacity:0}} animate={{translateY:0,opacity:1}} transition={{type:'spring',stiffness:120,duration:0}} className='flex flex-col justify-center items-center  border-b border-gray-300 py-2'><div className='h-[60px] relative bg-white flex gap-4 items-center justify-center'>
+              <motion.div exit={{translateY:-30,opacity:0}} initial={{translateY:-100,opacity:0}} animate={{translateY:0,opacity:1}} transition={{type:'spring',stiffness:120,duration:0}} className='flex flex-col justify-center items-center  border-b border-gray-300 py-2'><div className='h-[60px] relative bg-white flex gap-4 items-center justify-center'>
                        <div className="flex items-center gap-2">
                           <MdPlace/>
                           <input type="text" value={location} onChange={(e)=>setLocation(e.target.value)} placeholder='Search a Location' />
