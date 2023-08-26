@@ -7,10 +7,11 @@ import Skeleton from 'react-loading-skeleton';
 
 
 const IndexPage = () => {
-      const { allPlaces,error,loading} = useContext(PlaceContext);
+      const { allPlaces,error,loading } = useContext(PlaceContext);
       
       console.log(allPlaces)
       console.log(error)
+      console.log(loading)
   return (
          <>
            <div className="mt-8 grid max-w-8xl pt-4 px-12 gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
