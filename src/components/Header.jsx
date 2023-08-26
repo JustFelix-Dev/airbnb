@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { userContext } from '../ContextHook/userContext';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { MdCalendarMonth,MdPlace } from 'react-icons/md';
 import { DateRange } from 'react-date-range';
 import { format } from 'date-fns';
@@ -86,8 +86,9 @@ const Header = () => {
               </Link>
              </div>
          </header>
+              <AnimatePresence> 
                 { path?.pathname === '/' && showSearch && (
-          <div className='flex flex-col justify-center items-center  border-b border-gray-300 py-2'><div className='headerSearch h-[60px] relative bg-white flex gap-4 items-center justify-center'>
+              <motion.div exit={{translateY:-20,opacity:0}} initial={{translateY:-100,opacity:0}} animate={{translateY:0,opacity:1}} transition={{type:'spring',stiffness:120}} className='flex flex-col justify-center items-center  border-b border-gray-300 py-2'><div className='headerSearch h-[60px] relative bg-white flex gap-4 items-center justify-center'>
                        <div className="flex items-center gap-2">
                           <MdPlace/>
                           <input type="text" value={location} onChange={(e)=>setLocation(e.target.value)} placeholder='Search a Location' />
@@ -125,8 +126,9 @@ const Header = () => {
                     <input type="text" inputMode="numeric" value={"$"+ " "+ minValue} />
                     <input type="text" inputMode="numeric" value={"$"+ " " + maxValue} />
                 </div>
-                </div>)
+                </motion.div>)
                   }
+              </AnimatePresence>
 
           </>
   )
