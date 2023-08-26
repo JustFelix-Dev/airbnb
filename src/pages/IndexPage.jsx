@@ -5,17 +5,25 @@ import { PlaceContext } from '../ContextHook/placeContext';
 import 'react-loading-skeleton/dist/skeleton.css';
 import Skeleton from 'react-loading-skeleton';
 import Loader from '../components/Loader';
+import { AnimatePresence, motion } from 'framer-motion';
 
 
 const IndexPage = () => {
       const { allPlaces,error,loading } = useContext(PlaceContext);
       
-      console.log(allPlaces)
-      console.log(error)
-      console.log("Loading:",loading)
   return (
          <>
-          { loading ? <Loader/> : <div className="mt-8 grid max-w-8xl pt-4 px-12 gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+         <AnimatePresence>
+          { loading && (
+           <motion.div exit={{opacity:0}} transition={{duration:3}} className='h-[80vh] w-full flex items-center justify-center bg-white'>
+           <motion.div initial={{rotate:0,scale:0.8}} animate={{rotate:'360deg',scale:1}} transition={{duration:2, repeat:'infinity',repeatType:'loop'}}>
+            <img src="/images/airbnb.png" alt="loader" height={100} width={100} />
+           </motion.div>
+       </motion.div>
+         ) }
+         </AnimatePresence>  
+
+         { !loading &&  <div className="mt-8 grid max-w-8xl pt-4 px-12 gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {
           allPlaces?.length > 0 && allPlaces.map((place,idx) => (
             <Link key={idx} to={'/place/'+place._id}>
