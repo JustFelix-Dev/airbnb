@@ -15,9 +15,9 @@ const IndexPage = () => {
   return (
          <>
            <div className="mt-8 grid max-w-8xl pt-4 px-12 gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {
+          {  loading ? <Skeleton className='h-32 w-32'/> :
           allPlaces?.length > 0 && allPlaces.map((place,idx) => (
-            loading ? <Skeleton className='h-32 w-32'/> : <Link key={idx} to={'/place/'+place._id}>
+            <Link key={idx} to={'/place/'+place._id}>
           <div className="bg-gray-500 mb-2 rounded-2xl flex">
             {place.photos?.[0] && (
               <img className="rounded-xl object-cover aspect-square " src={'https://www.airbnb-server.felixdev.com.ng/uploads/'+place.photos?.[0]} alt=""/> 
