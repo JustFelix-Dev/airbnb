@@ -42,7 +42,7 @@ const IndexPage = () => {
          </AnimatePresence>  
 
          { !loading &&
-          ( <motion.div variants={renderOnce ? placesVariants : {}} initial='hidden' animate='visible' className="mt-8 grid max-w-8xl pt-4 px-12 gap-x-6 gap-y-8 grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+          ( <motion.div variants={renderOnce ? placesVariants : {}} initial='hidden' animate='visible' className="mt-8 grid max-w-8xl pt-4 px-12 gap-x-6 gap-y-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {
           allPlaces?.length > 0 && allPlaces.map((place,idx) => (
   
