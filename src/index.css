@@ -13,6 +13,13 @@
     @apply bg-black;
 }
 
+/* custom */
+@media screen and (max-width:460px){
+  .indexLocation{
+    grid-template-columns: 1fr;
+  }
+
+}
 ::-webkit-progress-bar{
     display: flex;
     overflow: hidden;
