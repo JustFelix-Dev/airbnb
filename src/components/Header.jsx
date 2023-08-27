@@ -48,15 +48,15 @@ const Header = () => {
  
   return (
     <>
-          <header className='px-10 py-3 flex border shadow-sm justify-between'>
+          <header className=' px-4 md:px-10 py-3 flex border shadow-sm justify-between '>
              <Link to='/' className='flex items-center gap-1'>
                 <img src="/images/svgexport-2.svg" alt="airbnb_logo" />
                  <span className='font-extrabold text-2xl text-primary hidden lg:block'>airbnb</span>
              </Link>
-            { path?.pathname === "/" ? <div className='flex gap-2 items-center border border-gray-300 rounded-full pl-6 pr-2 py-3 shadow-md shadow-gray-200 text-sm'>
-               <div className=" border-r border-gray-300 pr-2">Anywhere</div>
-               <div className=" border-r border-gray-300 pr-2">Any week</div>
-               <div>Add guests</div>
+            { path?.pathname === "/" ? <div className='flex gap-2 items-center md:border border-gray-300 rounded-full pl-6 pr-2 py-3 sm:shadow-md shadow-gray-200 text-sm'>
+               <div className=" border-r border-gray-300 pr-2 hidden sm:block">Anywhere</div>
+               <div className=" border-r border-gray-300 pr-2 hidden sm:block">Any week</div>
+               <div className='hidden sm:block'>Add guests</div>
                <button onClick={handleSearch} className=' bg-primary p-2 rounded-full'><img src="/images/svgexport-4.svg" alt="airbnb_search" height={15} width={15} /></button>
              </div> : (<div>
                    <Link to={'/'} onClick={handleShow}><div className=' cursor-pointer flex gap-3 items-center border border-gray-400 shadow-lg py-3 px-12 rounded-full'><h1>Search</h1> <button className='bg-primary p-2 rounded-full'><img src="/images/svgexport-4.svg" alt="airbnb_search" height={15} width={15} /></button></div></Link>
