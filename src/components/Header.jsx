@@ -63,7 +63,7 @@ const Header = () => {
              </div>) }
              <div className='flex items-center gap-5 '>
               <div className='hidden md:block'><h1>Airbnb your home</h1></div>
-              <div><img src="/images/svgexport-5.svg" alt="" /></div>
+              <div className='hidden sm:block'><img src="/images/svgexport-5.svg" alt="" /></div>
               <Link to={ user ? '/account' : '/login'} className='flex items-center gap-2 border border-gray-300 rounded-full px-2 py-1'>
                 <img src="/images/svgexport-6.svg" alt="menu" height={20} width={17} />
                 <img
