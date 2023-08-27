@@ -90,7 +90,7 @@ const Header = () => {
          </header>
               <AnimatePresence mode='popLayout'> 
                 { path?.pathname === '/' && showSearch && (
-                  <div className='absolute top-[75px] left-[20%] right-[20%] md:static'>
+                  <div className='absolute top-[73px] md:static'>
               <motion.div exit={{translateY:-10,opacity:0}} initial={{translateY:-100,opacity:0}} animate={{translateY:0,opacity:1}} transition={{type:'spring',stiffness:120,duration:0}} className='flex flex-col justify-center items-center  border-b border-gray-300 py-2'>
                 <div className='relative bg-white flex flex-col gap-4 items-center justify-center sm:flex-col md:flex-row'>
                        <div className="flex items-center gap-2">
