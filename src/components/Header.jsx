@@ -60,7 +60,7 @@ const Header = () => {
                    <Link to={'/'} onClick={handleShow}><div className=' cursor-pointer flex gap-3 items-center border border-gray-400 shadow-lg py-3 px-12 rounded-full'><h1>Search</h1> <button className='bg-primary p-2 rounded-full'><img src="/images/svgexport-4.svg" alt="airbnb_search" height={15} width={15} /></button></div></Link>
              </div>) }
              <div className='flex items-center gap-5 '>
-              <div><h1>Airbnb your home</h1></div>
+              <div className='hidden md:block'><h1>Airbnb your home</h1></div>
               <div><img src="/images/svgexport-5.svg" alt="" /></div>
               <Link to={ user ? '/account' : '/login'} className='flex items-center gap-2 border border-gray-300 rounded-full px-2 py-1'>
                 <img src="/images/svgexport-6.svg" alt="menu" height={20} width={17} />
