@@ -49,7 +49,7 @@ const Header = () => {
           <header className='px-10 py-3 flex border shadow-sm justify-between'>
              <Link to='/' className='flex items-center gap-1'>
                 <img src="/images/svgexport-2.svg" alt="airbnb_logo" />
-                 <span className='font-extrabold text-2xl text-primary'>airbnb</span>
+                 <span className='font-extrabold text-2xl text-primary hidden lg:block'>airbnb</span>
              </Link>
             { path?.pathname === "/" ? <div className='flex gap-2 items-center border border-gray-300 rounded-full pl-6 pr-2 py-3 shadow-md shadow-gray-200'>
                <div className=" border-r border-gray-300 pr-2">Anywhere</div>
