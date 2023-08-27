@@ -51,7 +51,7 @@ const Header = () => {
                 <img src="/images/svgexport-2.svg" alt="airbnb_logo" />
                  <span className='font-extrabold text-2xl text-primary hidden lg:block'>airbnb</span>
              </Link>
-            { path?.pathname === "/" ? <div className='flex gap-2 items-center border border-gray-300 rounded-full pl-6 pr-2 py-3 shadow-md shadow-gray-200'>
+            { path?.pathname === "/" ? <div className='flex gap-2 items-center border border-gray-300 rounded-full pl-6 pr-2 py-3 shadow-md shadow-gray-200 text-sm'>
                <div className=" border-r border-gray-300 pr-2">Anywhere</div>
                <div className=" border-r border-gray-300 pr-2">Any week</div>
                <div>Add guests</div>
