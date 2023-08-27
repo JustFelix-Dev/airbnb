@@ -15,7 +15,7 @@
 
 /* custom */
 @media screen and (max-width:460px){
-  .indexLocation{
+  .indexLocations{
     grid-template-columns: 1fr;
   }
 
