@@ -39,8 +39,7 @@ const uploadPhoto = (e) => {
   const data = new FormData();
   data.append('photo', file);
 
-  axios
-    .post('/userPhoto', data, {
+ axios.post('/userPhoto', data, {
       headers: { 'Content-Type': 'multipart/form-data' },
     })
     .then((response) => {
