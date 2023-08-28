@@ -90,7 +90,7 @@ const Header = () => {
          </header>
               <AnimatePresence mode='popLayout'> 
                 { path?.pathname === '/' && showSearch && (
-                  <motion.div exit={{translateY:-10,opacity:0}} className='absolute top-[73px] border-t px-2 bg-white z-2 md:static'>
+                  <motion.div exit={{translateY:-10,opacity:0}} className='absolute top-[79px] left-[20%] right-[20%] border-t px-2 bg-white z-2 md:static'>
               <motion.div exit={{translateY:-10,opacity:0}} initial={{translateY:-100,opacity:0}} animate={{translateY:0,opacity:1}} transition={{type:'spring',stiffness:120,duration:0}} className='flex flex-col justify-center items-center  border-b border-gray-300 py-2'>
                 <div className='relative bg-white flex flex-col gap-4 items-center justify-center sm:flex-col md:flex-row'>
                        <div className="flex items-center gap-2">
@@ -102,7 +102,7 @@ const Header = () => {
                           <span onClick={handleDate} className= ' cursor-pointer text-gray-400 border py-2 px-4 rounded-lg hover:border-primary'>{`${format(date[0].startDate,'MM/dd/yyyy')} to ${format(date[0].endDate,'MM/dd/yyyy')}`}</span>
                           { openDate && <DateRange rangeColors={['#FF385C']}
                           editableDateInputs={true} onChange={item => setDate([item.selection])}
-                           moveRangeOnFirstSelection={false} ranges={date} className='transition  absolute top-[320px] -right-10 md:top-[110px]' />}
+                           moveRangeOnFirstSelection={false} ranges={date} className='transition absolute top-[320px] -right-10 md:top-[110px]'/>}
                        </div>
                        <div>
                        <div className>
