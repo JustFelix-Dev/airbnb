@@ -60,13 +60,7 @@ const uploadPhoto=(e)=>{
   reader.readAsDataURL(selectedImage);
   reader.onload=()=>{
     setPhoto(reader.result);
-    axios.post('/register',{photo: reader.result})
-    .then((result)=>{
-      console.log("success:",result)
-      console.log(photo)
-    }).catch((err)=>{
-      console.log(err)
-    })
+    console.log("MyPhoto:",photo)
   }
 }
 
