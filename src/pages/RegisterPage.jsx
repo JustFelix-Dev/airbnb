@@ -9,12 +9,13 @@ const RegisterPage = () => {
   const [ name,setName ] = useState('');
   const [ email,setEmail ] = useState('');
   const [ password,setPassword ] = useState('');
-  const [ photo,setPhoto] = useState('');
+  const [ photo,setPhoto] = useState("");
   const [ isLoading,setIsLoading ] = useState(false);
   const [ splashScreen,setSplashScreen] = useState(true);
   const navigate = useNavigate();
   const imageRef = useRef();
   const inputRef = useRef();
+  let myBasePhoto;
 
   const changeInputType=()=>{
        if(inputRef.current.type == "password"){
@@ -60,7 +61,9 @@ const uploadPhoto=(e)=>{
   reader.readAsDataURL(selectedImage);
   reader.onload=()=>{
     setPhoto(reader.result);
+    myBasePhoto = reader.result;
     console.log("MyPhoto:",photo)
+    console.log(myBasePhoto)
   }
 }
 
@@ -69,7 +72,7 @@ const uploadPhoto=(e)=>{
        e.preventDefault()
        try{
          await axios.post('/register',{
-              name,email,password,photo
+              name,email,password,photo:myBasePhoto
           }).then((res)=>{
            toast.success('Check your e-mail for login details!')
             navigate('/login')
