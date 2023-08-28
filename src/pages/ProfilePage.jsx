@@ -62,9 +62,8 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                   <img 
                         src={
                           user && user.photo
-                            ? user.photo.startsWith('https://')
                               ? user.photo
-                               : 'images/svgexport-7.svg' : ''
+                               : 'images/svgexport-7.svg'
                         }
                         alt="userIcon"
                         height={150}
