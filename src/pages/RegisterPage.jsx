@@ -68,6 +68,7 @@ const uploadPhoto=(e)=>{
 }
 
   const handleForm=async(e)=>{
+    console.log("BasePhoto:",myBasePhoto)
          setIsLoading(true)
        e.preventDefault()
        try{
