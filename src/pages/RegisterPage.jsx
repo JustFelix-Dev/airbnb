@@ -75,6 +75,8 @@ console.log("EffectPhoto2:",photo)
 
   const handleForm=async(e)=>{
     console.log("BasePhoto:",myBasePhoto)
+    console.log("RealPhoto:",photo)
+
          setIsLoading(true)
        e.preventDefault()
        try{
