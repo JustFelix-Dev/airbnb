@@ -60,12 +60,18 @@ const uploadPhoto=(e)=>{
   let reader = new FileReader();
   reader.readAsDataURL(selectedImage);
   reader.onload=()=>{
-    setPhoto(reader.result);
+   setPhoto(reader.result);
     myBasePhoto = reader.result;
-    console.log("MyPhoto:",photo)
     console.log(myBasePhoto)
   }
 }
+
+useEffect(()=>{
+  console.log("EffectPhoto:",photo)
+},[photo])
+
+console.log("EffectPhoto2:",photo)
+
 
   const handleForm=async(e)=>{
     console.log("BasePhoto:",myBasePhoto)
@@ -73,7 +79,7 @@ const uploadPhoto=(e)=>{
        e.preventDefault()
        try{
          await axios.post('/register',{
-              name,email,password,photo:myBasePhoto
+              name,email,password,photo
           }).then((res)=>{
            toast.success('Check your e-mail for login details!')
             navigate('/login')
