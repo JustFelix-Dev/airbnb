@@ -33,25 +33,41 @@ const RegisterPage = () => {
 const handleGithub = ()=>{
     window.open('https://www.airbnb-server.felixdev.com.ng/auth/github','_self')
 }
-const uploadPhoto = (e) => {
-  e.preventDefault();
-  const file = e.target.files[0];
-  const data = new FormData();
-  data.append('photo', file);
+// const uploadPhoto = (e) => {
+//   e.preventDefault();
+//   const file = e.target.files[0];
+//   const data = new FormData();
+//   data.append('photo', file);
 
- axios.post('/userPhoto', data, {
-      headers: { 'Content-Type': 'multipart/form-data' },
+//  axios.post('/userPhoto', data, {
+//       headers: { 'Content-Type': 'multipart/form-data' },
+//     })
+//     .then((response) => {
+//       const { data: { photo } } = response;
+//       // Update the state with the photo path
+//       setPhoto(photo);
+//       console.log(photo);
+//     })
+//     .catch((error) => {
+//       console.error('Error uploading photo:', error);
+//     });
+// };
+
+const uploadPhoto=(e)=>{
+  e.preventDefault()
+  let selectedImage = e.target.files[0];
+  let reader = new FileReader();
+  reader.readAsDataURL(selectedImage);
+  reader.onload=()=>{
+    setPhoto(reader.result);
+    axios.post('/register',{photo: reader.result})
+    .then((result)=>{
+      console.log("success")
+    }).catch((err)=>{
+      console.log(err)
     })
-    .then((response) => {
-      const { data: { photo } } = response;
-      // Update the state with the photo path
-      setPhoto(photo);
-      console.log(photo);
-    })
-    .catch((error) => {
-      console.error('Error uploading photo:', error);
-    });
-};
+  }
+}
 
   const handleForm=async(e)=>{
          setIsLoading(true)
