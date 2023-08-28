@@ -123,7 +123,7 @@ const Header = () => {
                        </div>
                       
                        <div className="flex items-center gap-2">
-                          <button onClick={()=> handleFilter(location,minValue,maxValue)} className='bg-primary text-white py-2 px-6 rounded-lg'>Search</button>
+                          <button onClick={()=>{ handleFilter(location,minValue,maxValue);setShowSearch(false)}} className='bg-primary text-white py-2 px-6 rounded-lg'>Search</button>
                        </div> <br />
                   </div>
                    <div className=" flex items-center gap-2 max-w-md">
