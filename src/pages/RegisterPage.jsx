@@ -62,7 +62,7 @@ const uploadPhoto=(e)=>{
     setPhoto(reader.result);
     axios.post('/register',{photo: reader.result})
     .then((result)=>{
-      console.log("success")
+      console.log("success:",result)
     }).catch((err)=>{
       console.log(err)
     })
