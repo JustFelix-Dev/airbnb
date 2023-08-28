@@ -63,6 +63,7 @@ const uploadPhoto=(e)=>{
     axios.post('/register',{photo: reader.result})
     .then((result)=>{
       console.log("success:",result)
+      console.log(photo)
     }).catch((err)=>{
       console.log(err)
     })
