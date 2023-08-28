@@ -15,7 +15,6 @@ const RegisterPage = () => {
   const navigate = useNavigate();
   const imageRef = useRef();
   const inputRef = useRef();
-  let myBasePhoto;
 
   const changeInputType=()=>{
        if(inputRef.current.type == "password"){
@@ -34,25 +33,6 @@ const RegisterPage = () => {
 const handleGithub = ()=>{
     window.open('https://www.airbnb-server.felixdev.com.ng/auth/github','_self')
 }
-// const uploadPhoto = (e) => {
-//   e.preventDefault();
-//   const file = e.target.files[0];
-//   const data = new FormData();
-//   data.append('photo', file);
-
-//  axios.post('/userPhoto', data, {
-//       headers: { 'Content-Type': 'multipart/form-data' },
-//     })
-//     .then((response) => {
-//       const { data: { photo } } = response;
-//       // Update the state with the photo path
-//       setPhoto(photo);
-//       console.log(photo);
-//     })
-//     .catch((error) => {
-//       console.error('Error uploading photo:', error);
-//     });
-// };
 
 const uploadPhoto=(e)=>{
   e.preventDefault()
@@ -61,8 +41,6 @@ const uploadPhoto=(e)=>{
   reader.readAsDataURL(selectedImage);
   reader.onload=()=>{
    setPhoto(reader.result);
-    myBasePhoto = reader.result;
-    console.log(myBasePhoto)
   }
 }
 
@@ -70,13 +48,8 @@ useEffect(()=>{
   console.log("EffectPhoto:",photo)
 },[photo])
 
-console.log("EffectPhoto2:",photo)
-
 
   const handleForm=async(e)=>{
-    console.log("BasePhoto:",myBasePhoto)
-    console.log("RealPhoto:",photo)
-
          setIsLoading(true)
        e.preventDefault()
        try{
@@ -142,7 +115,7 @@ console.log("EffectPhoto2:",photo)
                       <input type="file" className='hidden' onChange={uploadPhoto} required/>
                       {
                       photo && photo.length > 0 ? 
-                          <img src={"https://www.airbnb-server.felixdev.com.ng/userPhoto/" + photo} alt="userPhoto" width={30} height={30} style={{borderRadius:'10px'}} />
+                          <img src={photo} alt="userPhoto" width={20} height={20} style={{borderRadius:'10px'}} />
                          : <><SlCloudUpload/>Upload</>
                       }
                         </label>

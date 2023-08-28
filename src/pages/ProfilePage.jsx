@@ -64,8 +64,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                           user && user.photo
                             ? user.photo.startsWith('https://')
                               ? user.photo
-                              : `https://www.airbnb-server.felixdev.com.ng/userPhoto/${user.photo}` 
-                               : 'images/svgexport-7.svg'
+                               : 'images/svgexport-7.svg' : ''
                         }
                         alt="userIcon"
                         height={150}
