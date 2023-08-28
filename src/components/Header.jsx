@@ -102,7 +102,7 @@ const Header = () => {
                           <span onClick={handleDate} className= ' cursor-pointer text-gray-400 border py-2 px-4 rounded-lg hover:border-primary'>{`${format(date[0].startDate,'MM/dd/yyyy')} to ${format(date[0].endDate,'MM/dd/yyyy')}`}</span>
                           { openDate && <DateRange rangeColors={['#FF385C']}
                           editableDateInputs={true} onChange={item => setDate([item.selection])}
-                           moveRangeOnFirstSelection={false} ranges={date} className='transition absolute -left-12 top-[320px]  md:top-[110px] md:left-64'/>}
+                           moveRangeOnFirstSelection={false} ranges={date} className='transition absolute -left-8 top-[320px]  md:top-[110px] md:left-64'/>}
                        </div>
                        <div>
                        <div className>

@@ -157,4 +157,4 @@ const uploadPhoto = (e) => {
   )
 }
 
-export default RegisterPage
+export default RegisterPage;
