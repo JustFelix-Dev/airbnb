@@ -112,7 +112,7 @@ useEffect(()=>{
                       </div>
                  </div>
                  <label className='my-2 bg-transparent cursor-pointer flex justify-center items-center gap-2 border border-gray-200 rounded-lg text-xl p-2'>
-                      <input type="file" className='hidden' accept='.jpeg,.png,.jpg,.webP' onChange={uploadPhoto} required/>
+                      <input type="file" className='hidden' accept='.png' onChange={uploadPhoto} required/>
                       {
                       photo && photo.length > 0 ? 
                           <img src={photo} alt="userPhoto" width={20} height={20} style={{borderRadius:'10px'}} />
