@@ -30,7 +30,7 @@ const LocationPages = () => {
         axios.get('/places').then(({data})=>{
             setFetchedPlaces(data)
         })
-    },[])
+    },[fetchedPlaces])
 
 
     const addPhotoByLink = async (e) => {
