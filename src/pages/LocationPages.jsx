@@ -33,14 +33,18 @@ const LocationPages = () => {
     },[])
 
 
-  const addPhotoByLink=async(e)=>{
-           e.preventDefault()
-        const {data:filename} = await axios.post('/uploadByLink',{link : photoLink})
-         setPhotos(prev=>{
-            return [...prev,filename]
-         })
-           setPhotoLink('')
-    }
+    const addPhotoByLink = async (e) => {
+      e.preventDefault();
+      try {
+        const response = await axios.post('/uploadByLink', { link: photoLink });
+        const imageUrl = response.data;
+        setPhotos((prev) => [...prev, imageUrl]);
+        setPhotoLink('');
+      } catch (error) {
+        console.error('Error adding photo:', error);
+      }
+    };
+    
 
  const removePhoto=(e,file)=>{
     e.preventDefault()
