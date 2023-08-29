@@ -70,8 +70,13 @@ useEffect(()=>{
 
   useEffect(()=>{
     setTimeout(()=>{
-        setSplashScreen(false)
-    },5000)
+        if(setSplashScreen){
+          setSplashScreen(false)
+        }else{
+          return;
+        }
+
+    },2500)
   },[])
 
 
