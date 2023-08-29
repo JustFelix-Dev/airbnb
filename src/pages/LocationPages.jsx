@@ -58,12 +58,13 @@ const LocationPages = () => {
         e.preventDefault()
         const files = e.target.files;
         const data = new FormData();
-        for(let i=0;i < files.length; i++){
+        for(let i=0; i <files.length; i++){
              data.append('photos',files[i])
         }
         axios.post('/upload',data,{
             headers: {'Content-Type':'multipart/form-data'}
         }).then(response=>{
+                console.log("Presponse:",response)
                const {data:filename} = response;
                setPhotos(prev=>{
                 return [...prev,...filename]
