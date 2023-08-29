@@ -10,6 +10,7 @@ const RegisterPage = () => {
   const [ email,setEmail ] = useState('');
   const [ password,setPassword ] = useState('');
   const [ photo,setPhoto] = useState("");
+  const [ image,setImage] = useState("");
   const [ isLoading,setIsLoading ] = useState(false);
   const [ splashScreen,setSplashScreen] = useState(true);
   const navigate = useNavigate();
@@ -37,6 +38,7 @@ const handleGithub = ()=>{
 const uploadPhoto=(e)=>{
   e.preventDefault()
   let selectedImage = e.target.files[0];
+  setImage(selectedImage)
   let reader = new FileReader();
   reader.readAsDataURL(selectedImage);
   reader.onload=()=>{
@@ -46,16 +48,20 @@ const uploadPhoto=(e)=>{
 
 useEffect(()=>{
   console.log("EffectPhoto:",photo)
-},[photo])
+},[photo,setImage])
 
 
   const handleForm=async(e)=>{
          setIsLoading(true)
        e.preventDefault()
+
+       const formData = new FormData();
+       formData.append('name', name);
+       formData.append('email', email);
+       formData.append('password', password);
+       formData.append('photo', image);
        try{
-         await axios.post('/register',{
-              name,email,password,photo
-          }).then((res)=>{
+         await axios.post('/register', formData).then((res)=>{
            toast.success('Check your e-mail for login details!')
             navigate('/login')
             setIsLoading(false)
