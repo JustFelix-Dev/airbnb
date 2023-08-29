@@ -69,6 +69,8 @@ const LocationPages = () => {
                setPhotos(prev=>{
                 return [...prev,...filename]
              })
+        }).catch(err=>{
+          console.log("Err:",err)
         })
     }
 
