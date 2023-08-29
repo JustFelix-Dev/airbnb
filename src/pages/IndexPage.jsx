@@ -49,7 +49,7 @@ const IndexPage = () => {
             <Link key={idx} to={'/place/'+place._id}>
           <div className="bg-gray-500 mb-2 rounded-2xl flex">
             {place.photos?.[0] && (
-              <img className="rounded-xl object-cover aspect-square " src={'https://www.airbnb-server.felixdev.com.ng/uploads/'+place.photos?.[0]} alt=""/> 
+              <img className="rounded-xl object-cover aspect-square " src={place.photos[0]} alt=""/> 
             )}
           </div>
           <h2 className="font-bold truncate">{place.address}</h2>
