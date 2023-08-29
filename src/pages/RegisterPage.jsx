@@ -62,7 +62,9 @@ useEffect(()=>{
        formData.append('password', password);
        formData.append('photo', image);
        try{
-         await axios.post('/register', formData).then((res)=>{
+         await axios.post('/register', formData,{
+          headers: {'Content-Type':'multipart/form-data'}
+      }).then((res)=>{
            toast.success('Check your e-mail for login details!')
             navigate('/login')
             setIsLoading(false)
