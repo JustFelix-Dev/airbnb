@@ -39,6 +39,8 @@ const LocationPages = () => {
         const response = await axios.post('/uploadByLink', { link: photoLink });
         const imageUrl = response.data;
         setPhotos((prev) => [...prev, imageUrl]);
+        console.log(Photos)
+        console.log(response,imageUrl)
         setPhotoLink('');
       } catch (error) {
         console.error('Error adding photo:', error);
