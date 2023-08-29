@@ -52,7 +52,7 @@ useEffect(()=>{
 
 
   const handleForm=async(e)=>{
-    console.log("Myimage:",image);
+    console.log("MyimageR:",image);
          setIsLoading(true)
        e.preventDefault()
 
