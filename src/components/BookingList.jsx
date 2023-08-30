@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import PlacesImage from './PlacesImage';
 import { Link } from 'react-router-dom';
 import BookingDate from './BookingDate';
+import { AnimatePresence, motion } from 'framer-motion';
+
 
 const BookingList = () => {
     const [ bookings,setBookings ] = useState([]);
