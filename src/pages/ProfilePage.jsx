@@ -126,7 +126,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                             <div className=' h-[110px] overflow-auto'>
                                     { !isLoading ? (
                                       <AnimatePresence>
-                                    <motion.div exit={{opacity:0}} transition={{duration:3}} className=''>
+                                    <motion.div exit={{opacity:0}} transition={{duration:3}} className='flex justify-start text-start'>
                                             <div className="newtons-cradle small">
                                             <div className="newtons-cradle__dot"></div>
                                             <div className="newtons-cradle__dot"></div>
