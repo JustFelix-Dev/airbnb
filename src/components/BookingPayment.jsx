@@ -85,7 +85,7 @@ const BookingPayment = ({ booking }) => {
     <>   
          <AnimatePresence>
           { isLoading && (
-           <motion.div exit={{opacity:0}} transition={{duration:3}} className='absolute top-0 bottom-0 left-0 right-0 booking w-full flex items-center justify-center '>
+           <motion.div exit={{opacity:0}} transition={{duration:3}} className='absolute bg-white top-0 bottom-0 left-0 right-0 booking w-full flex items-center justify-center '>
                    <div className="newtons-cradle index">
                   <div className="newtons-cradle__dot"></div>
                   <div className="newtons-cradle__dot"></div>
