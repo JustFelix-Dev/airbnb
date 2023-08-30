@@ -47,15 +47,17 @@ const uploadPhoto=(e)=>{
 }
 
 useEffect(()=>{
-  console.log("EffectPhoto:",photo)
+  console.log("")
 },[photo,image])
 
 
   const handleForm=async(e)=>{
-    console.log("MyimageR:",image);
          setIsLoading(true)
        e.preventDefault()
 
+       if(!image){
+          toast.error('Photo is required!')
+       }
        const formData = new FormData();
        formData.append('name', name);
        formData.append('email', email);
@@ -65,7 +67,6 @@ useEffect(()=>{
          await axios.post('/register', formData,{
           headers: {'Content-Type':'multipart/form-data'}
       }).then((res)=>{
-             console.log("Response:", res)
            toast.success('Check your e-mail for login details!')
            navigate('/login')
            setIsLoading(false)
