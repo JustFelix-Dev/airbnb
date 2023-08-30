@@ -97,7 +97,7 @@ button.primary{
     height: var(--uib-size);
    }
    .newtons-cradle.index {
-    --uib-size: 40px;
+    --uib-size: 50px;
     --uib-speed: 1.2s;
     --uib-color: #FF385C;
     position: relative;
