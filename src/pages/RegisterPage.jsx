@@ -65,16 +65,17 @@ useEffect(()=>{
          await axios.post('/register', formData,{
           headers: {'Content-Type':'multipart/form-data'}
       }).then((res)=>{
+             console.log("Response:", res)
            toast.success('Check your e-mail for login details!')
-            navigate('/login')
-            setIsLoading(false)
+           navigate('/login')
+           setIsLoading(false)
           })
-       }
-       catch(err){
+        }
+        catch(err){
         console.log(err)
         toast.error(err.response.data)
-       }
-       setIsLoading(false)
+      }
+      setIsLoading(false)
   }
 
   useEffect(()=>{
