@@ -64,18 +64,6 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
 
     return ( 
              <>
-            <AnimatePresence>
-          { isLoading && (
-           <motion.div exit={{opacity:0}} transition={{duration:3}} className='h-[80vh] w-full flex items-center justify-center bg-white'>
-                   <div className="newtons-cradle index">
-                  <div className="newtons-cradle__dot"></div>
-                  <div className="newtons-cradle__dot"></div>
-                  <div className="newtons-cradle__dot"></div>
-                  <div className="newtons-cradle__dot"></div>
-                  </div>
-       </motion.div>
-         ) }
-         </AnimatePresence>  
 
             { !isLoading && user &&  <div className=' w-[75%]  p-4 overflow-hidden
                shadow-2xl rounded-lg mx-auto' >
@@ -136,8 +124,19 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                      <div className='mt-2 grow'>
                             <h1 className='bg-gray-100 max-w-xs my-2 text-center py-1 px-2 text-primary rounded-md border'>Recent Reservations:</h1>
                             <div className=' h-[110px] overflow-auto'>
-                              {
-                            fetchOrders && fetchOrders.length > 0 ?
+                                    { isLoading ? (
+                                      <AnimatePresence>
+                                    <motion.div exit={{opacity:0}} transition={{duration:3}} className=''>
+                                            <div className="newtons-cradle index">
+                                            <div className="newtons-cradle__dot"></div>
+                                            <div className="newtons-cradle__dot"></div>
+                                            <div className="newtons-cradle__dot"></div>
+                                            <div className="newtons-cradle__dot"></div>
+                                            </div>
+                                </motion.div>
+                                </AnimatePresence>
+                                  )  :  
+                              fetchOrders && fetchOrders.length > 0 ?
                               fetchOrders.sort((a,b)=>new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()).map((order,idx)=>(
                               <div key={idx} className='flex my-2  gap-2 p-2 border border-primary rounded-lg'>
                                 <div className='flex '>
