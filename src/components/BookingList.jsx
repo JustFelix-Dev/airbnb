@@ -28,8 +28,8 @@ const BookingList = () => {
            <div className='h-[350px] overflow-auto px-12'>
            <AnimatePresence>
           { loading && (
-           <motion.div exit={{opacity:0}} transition={{duration:3}} className='h-[80vh] w-full flex items-center justify-center bg-white'>
-                   <div className="newtons-cradle index">
+           <motion.div exit={{opacity:0}} className=' flex items-center justify-center bg-white'>
+                   <div className="newtons-cradle small">
                   <div className="newtons-cradle__dot"></div>
                   <div className="newtons-cradle__dot"></div>
                   <div className="newtons-cradle__dot"></div>
