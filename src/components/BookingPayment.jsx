@@ -9,7 +9,6 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { userContext } from '../ContextHook/userContext';
 import { toast } from 'react-toastify';
-import { AnimatePresence, motion } from 'framer-motion';
 
 
 const BookingPayment = ({ booking }) => {
@@ -83,18 +82,6 @@ const BookingPayment = ({ booking }) => {
     }
   return (
     <>   
-         <AnimatePresence>
-          { isLoading && (
-           <motion.div exit={{opacity:0}} transition={{duration:3}} className='absolute bg-white top-0 bottom-0 left-0 right-0 booking w-full flex items-center justify-center '>
-                   <div className="newtons-cradle index">
-                  <div className="newtons-cradle__dot"></div>
-                  <div className="newtons-cradle__dot"></div>
-                  <div className="newtons-cradle__dot"></div>
-                  <div className="newtons-cradle__dot"></div>
-                  </div>
-       </motion.div>
-         ) }
-         </AnimatePresence>  
          { booking && isModal && <div id='myModal'  className='modal-confirm w-[31%] bg-white text-black fixed flex items-center py-8 px-4 rounded-2xl text-center z-10 top-[15%] left-[35%] right-[35%] border border-primary'>
             <div  >
             <p className='text-xl'> {order ?'Are you sure you want to cancel this reservation ?':'Are you sure you want to delete this booking ?'}</p>
