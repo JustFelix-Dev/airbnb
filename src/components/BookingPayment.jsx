@@ -9,6 +9,8 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { userContext } from '../ContextHook/userContext';
 import { toast } from 'react-toastify';
+import { AnimatePresence, motion } from 'framer-motion';
+
 
 const BookingPayment = ({ booking }) => {
   // Custom format string: 'd EEE,MMMM yyyy'
@@ -80,7 +82,19 @@ const BookingPayment = ({ booking }) => {
 
     }
   return (
-    <>
+    <>   
+         <AnimatePresence>
+          { isLoading && (
+           <motion.div exit={{opacity:0}} transition={{duration:3}} className='absolute top-0 bottom-0 left-0 right-0 booking w-full flex items-center justify-center '>
+                   <div className="newtons-cradle index">
+                  <div className="newtons-cradle__dot"></div>
+                  <div className="newtons-cradle__dot"></div>
+                  <div className="newtons-cradle__dot"></div>
+                  <div className="newtons-cradle__dot"></div>
+                  </div>
+       </motion.div>
+         ) }
+         </AnimatePresence>  
          { booking && isModal && <div id='myModal'  className='modal-confirm w-[31%] bg-white text-black fixed flex items-center py-8 px-4 rounded-2xl text-center z-10 top-[15%] left-[35%] right-[35%] border border-primary'>
             <div  >
             <p className='text-xl'> {order ?'Are you sure you want to cancel this reservation ?':'Are you sure you want to delete this booking ?'}</p>
@@ -130,21 +144,14 @@ const BookingPayment = ({ booking }) => {
                       :
                        (<div className='flex flex-col gap-2'>
                         <select onChange={handleSelectChange}
-                         value={ isLoading ?
-                          <div className="newtons-cradle small">
-                            <div className="newtons-cradle__dot"></div>
-                            <div className="newtons-cradle__dot"></div>
-                            <div className="newtons-cradle__dot"></div>
-                            <div className="newtons-cradle__dot"></div>
-                            </div>:selectedOption}
-                          className='bg-primary  px-4 py-1 text-white rounded-xs'
-                          >
+                         value={selectedOption}
+                        className='bg-primary  px-4 py-1 text-white rounded-xs'>
                         <option disabled className='bg-white text-primary' value={''} >Proceed to Payment</option>
                           <option  className='bg-white text-primary' value="direct">Proceed Directly</option>
                           <option  className='bg-white text-primary'  value="point">Proceed With Points</option>
                           </select>
                           <button onClick={openModal} className='flex bg-white  items-center gap-2 justify-center p-2'>Delete Booking <FaTrash/></button></div>)
-                  }
+                      }
                 </div>
                 
             </div>
