@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import { userContext } from '../ContextHook/userContext';
+import { AnimatePresence, motion } from 'framer-motion';
+
 
 const ProfilePage = ({user,setUser,setRedirected}) => {
     const [ isLoading,setIsLoading ] = useState(false);
