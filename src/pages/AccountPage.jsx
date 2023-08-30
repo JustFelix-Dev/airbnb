@@ -26,7 +26,6 @@ const AccountPage = () => {
     if(!ready){
         return (
             <AnimatePresence>
-            { isLoading && (
              <motion.div exit={{opacity:0}} transition={{duration:3}} className='h-[80vh] w-full flex items-center justify-center bg-white'>
                      <div className="newtons-cradle index">
                     <div className="newtons-cradle__dot"></div>
@@ -35,7 +34,6 @@ const AccountPage = () => {
                     <div className="newtons-cradle__dot"></div>
                     </div>
          </motion.div>
-           ) }
            </AnimatePresence>
         );
     }
