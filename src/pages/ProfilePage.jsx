@@ -17,12 +17,14 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
     const id = user._id;
 
     useEffect(()=>{
+        setIsLoading(true)
          axios.get(`/getUserOrder/${id}`).then(({data})=>{
             console.log(data)
             setFetchedOrders(data)
          }).catch((err)=>{
           console.log(err.message)
          })
+
 
       if(user.rewardPoint <= 499){
           setBadgeName('Bronze')
@@ -43,10 +45,16 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
         setBadgeUrl('/images/platinum-badge.png')
         setMaxValue(2000);
       }
+      setIsLoading(false)
     },[])
+
     const logout =async()=>{
         setIsLoading(true)
-        await axios.post('/logout')
+        try{
+          await axios.post('/logout')
+        }catch(err){
+          console.log(err)
+        }
         setUser(null)
         setRedirected(true)
         setIsLoading(false)
@@ -54,7 +62,20 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
 
     return ( 
              <>
-             <div className=' w-[75%]  p-4 overflow-hidden
+            <AnimatePresence>
+          { isLoading && (
+           <motion.div exit={{opacity:0}} transition={{duration:3}} className='h-[80vh] w-full flex items-center justify-center bg-white'>
+                   <div className="newtons-cradle index">
+                  <div className="newtons-cradle__dot"></div>
+                  <div className="newtons-cradle__dot"></div>
+                  <div className="newtons-cradle__dot"></div>
+                  <div className="newtons-cradle__dot"></div>
+                  </div>
+       </motion.div>
+         ) }
+         </AnimatePresence>  
+
+            { !isLoading && user &&  <div className=' w-[75%]  p-4 overflow-hidden
                shadow-2xl rounded-lg mx-auto' >
                 <div className=" flex gap-10 p-4 border border-dashed border-primary overflow-hidden rounded-xl ">
               <div className='border-r border-primary pr-20' >
@@ -135,7 +156,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                 </div>
 
                 </div>
-             </div>
+             </div>}
              </>
      );
 }
