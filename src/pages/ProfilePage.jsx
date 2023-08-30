@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 
 const ProfilePage = ({user,setUser,setRedirected}) => {
-    const [ isLoading,setIsLoading ] = useState(false);
+    const [ isLoading,setIsLoading ] = useState(true);
     const [ fetchOrders,setFetchedOrders ]  = useState(null);
     const [ points,setPoints ] = useState('');
     const [ badgeName,setBadgeName] = useState('');
@@ -19,7 +19,6 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
     const id = user._id;
 
     useEffect(()=>{
-        setIsLoading(true)
          axios.get(`/getUserOrder/${id}`).then(({data})=>{
             console.log(data)
             setFetchedOrders(data)
@@ -65,7 +64,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
     return ( 
              <>
 
-            { !isLoading && user &&  <div className=' w-[75%]  p-4 overflow-hidden
+            {  user &&  <div className=' w-[75%]  p-4 overflow-hidden
                shadow-2xl rounded-lg mx-auto' >
                 <div className=" flex gap-10 p-4 border border-dashed border-primary overflow-hidden rounded-xl ">
               <div className='border-r border-primary pr-20' >

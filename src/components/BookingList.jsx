@@ -8,10 +8,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const BookingList = () => {
     const [ bookings,setBookings ] = useState([]);
-    const [ loading,setLoading] = useState(false);
+    const [ loading,setLoading] = useState(true);
 
     useEffect(()=>{
-        setLoading(true)
         axios.get('/bookings')
         .then((response)=>{
          setBookings(response.data)
