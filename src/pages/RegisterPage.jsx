@@ -48,7 +48,7 @@ const uploadPhoto=(e)=>{
 
 useEffect(()=>{
   console.log("EffectPhoto:",photo)
-},[photo,setImage])
+},[photo,image])
 
 
   const handleForm=async(e)=>{
