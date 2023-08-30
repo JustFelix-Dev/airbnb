@@ -15,6 +15,7 @@ const BookingPayment = ({ booking }) => {
   const formattedCheckInDate = format(new Date(booking.checkIn), 'd EEE,MMMM yyyy');
   const formattedCheckOutDate = format(new Date(booking.checkOut), 'd EEE,MMMM yyyy');
   const [ isModal,setIsModal ] = useState(false);
+  const [ isLoading,setIsLoading] = useState(false);
   const [ order,setOrder ] = useState(false);
   const {user} = useContext(userContext);
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ const BookingPayment = ({ booking }) => {
   };
 
   const handleCheckOut=(option,{booking})=>{
+           setIsLoading(true)
          if(option == 'point'){
             const verifyPoints = user.rewardPoint;
             if(verifyPoints <= 50){
@@ -45,6 +47,8 @@ const BookingPayment = ({ booking }) => {
               console.log(err)
             }
           })
+          setIsLoading(false)
+
   }
 
     const handleDelete=(id)=>{
@@ -125,7 +129,16 @@ const BookingPayment = ({ booking }) => {
                       View Reservation<BsFillPatchCheckFill/></Link><button onClick={()=>{openModal();setOrder(true)}} className='flex items-center gap-1 bg-gray-100 text-primary py-1 px-4 border border-primary rounded-lg justify-center items-center'>Cancel Reservation<FcCancel/></button></div>) 
                       :
                        (<div className='flex flex-col gap-2'>
-                        <select onChange={handleSelectChange} value={selectedOption} className='bg-primary  px-4 py-1 text-white rounded-xs'>
+                        <select onChange={handleSelectChange}
+                         value={ isLoading ?
+                          <div className="newtons-cradle small">
+                            <div className="newtons-cradle__dot"></div>
+                            <div className="newtons-cradle__dot"></div>
+                            <div className="newtons-cradle__dot"></div>
+                            <div className="newtons-cradle__dot"></div>
+                            </div>:selectedOption}
+                          className='bg-primary  px-4 py-1 text-white rounded-xs'
+                          >
                         <option disabled className='bg-white text-primary' value={''} >Proceed to Payment</option>
                           <option  className='bg-white text-primary' value="direct">Proceed Directly</option>
                           <option  className='bg-white text-primary'  value="point">Proceed With Points</option>

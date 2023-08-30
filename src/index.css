@@ -110,7 +110,7 @@ button.primary{
    }
 
    .newtons-cradle.small {
-    --uib-size: 30px;
+    --uib-size: 25px;
     --uib-speed: 1.2s;
     --uib-color: #FF385C;
     position: relative;
