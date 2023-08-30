@@ -56,8 +56,8 @@ const BookingList = () => {
                </div> 
             }
             {
-                !loading && bookings.length < 0 &&(
-                    (<div className='bg-primary shadow-xl text-center mt-2 py-4 px-6 mx-auto max-w-xs rounded-lg font-semibold text-xl text-white'>
+                !loading && bookings.length < 1 &&(
+                    (<div className='shadow-xl text-center mt-2 py-4 px-6 mx-auto max-w-xs rounded-lg font-semibold text-xl text-white'>
                         No Bookings yet!.<br/><Link className='underline' to={'/'}>Make a booking here</Link></div>
                         )
                 )
