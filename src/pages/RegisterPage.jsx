@@ -56,6 +56,7 @@ useEffect(()=>{
        e.preventDefault()
 
        if(!image){
+        setIsLoading(false)
           return toast.error('Photo is required!')
        }
        const formData = new FormData();
