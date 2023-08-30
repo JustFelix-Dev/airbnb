@@ -124,7 +124,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                      <div className='mt-2 grow'>
                             <h1 className='bg-gray-100 max-w-xs my-2 text-center py-1 px-2 text-primary rounded-md border'>Recent Reservations:</h1>
                             <div className=' h-[110px] overflow-auto'>
-                                    { !isLoading && (
+                                    { isLoading && (
                                       <AnimatePresence>
                                     <motion.div exit={{opacity:0}} transition={{duration:3}} className='flex justify-start text-start'>
                                             <div className="newtons-cradle small">
@@ -137,7 +137,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                                 </AnimatePresence>
                                     )
                                     }
-                            { fetchOrders && fetchOrders.length > 0 &&
+                            { !isLoading && fetchOrders && fetchOrders.length > 0 &&
                               fetchOrders.sort((a,b)=>new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()).map((order,idx)=>(
                               <div key={idx} className='flex my-2  gap-2 p-2 border border-primary rounded-lg'>
                                 <div className='flex '>
@@ -153,7 +153,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                            </div>
                             )) }
                             {
-                              fetchOrders && fetchOrders.length < 1 &&(
+                              !isLoading && fetchOrders && fetchOrders.length < 1 &&(
                                (<div className='pt-4 text-primary font-bold w-[80%] mx-auto'>No reservations have been made yet!</div>)
                               )
                             }
