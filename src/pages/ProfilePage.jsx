@@ -124,7 +124,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                      <div className='mt-2 grow'>
                             <h1 className='bg-gray-100 max-w-xs my-2 text-center py-1 px-2 text-primary rounded-md border'>Recent Reservations:</h1>
                             <div className=' h-[110px] overflow-auto'>
-                                    { isLoading ? (
+                                    { !isLoading ? (
                                       <AnimatePresence>
                                     <motion.div exit={{opacity:0}} transition={{duration:3}} className=''>
                                             <div className="newtons-cradle index">
