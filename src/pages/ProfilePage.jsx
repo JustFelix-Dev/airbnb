@@ -127,7 +127,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                                     { !isLoading ? (
                                       <AnimatePresence>
                                     <motion.div exit={{opacity:0}} transition={{duration:3}} className=''>
-                                            <div className="newtons-cradle index">
+                                            <div className="newtons-cradle small">
                                             <div className="newtons-cradle__dot"></div>
                                             <div className="newtons-cradle__dot"></div>
                                             <div className="newtons-cradle__dot"></div>

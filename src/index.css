@@ -108,6 +108,19 @@ button.primary{
     width: var(--uib-size);
     height: var(--uib-size);
    }
+
+   .newtons-cradle.small {
+    --uib-size: 20px;
+    --uib-speed: 1.2s;
+    --uib-color: #FF385C;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: var(--uib-size);
+    height: var(--uib-size);
+   }
    
    .newtons-cradle__dot {
     position: relative;
