@@ -76,7 +76,7 @@ const Gallery = ({place}) => {
                             </div>
                     </div>
                   </div>
-                  <button onClick={()=>setShowAllPhotos(true)} className='absolute flex items-center bottom-2 right-2 bg-white font-medium text-black rounded-2xl border border-black py-2 px-4 '><CgMenuGridO/><span className='hidden md:block'>Show more Photos</span></button>
+                  <button onClick={()=>setShowAllPhotos(true)} className='absolute flex items-center bottom-2 right-2 bg-white font-medium text-black rounded-2xl border border-black py-2 px-4 '><CgMenuGridO/><span className='hidden md:block'>Show More Photos</span></button>
                   </div>
          </>
   )
