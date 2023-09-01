@@ -67,7 +67,7 @@ console.log(weather)
                         <BookingWidget place={place}/>
                       </div>
                   </div>
-                  <div className="bg-white -mx-8 px-8 py-8 border-t">
+                  <div className="bg-white border border-red-800 -mx-8 px-8 py-8 border-t">
                     <div className='flex justify-between gap-4'>
                      <div>
                       {
@@ -90,12 +90,12 @@ console.log(weather)
                           <span className='flex-[40%]'><span className='flex items-center gap-1'>Latitude<TbWorldLatitude/> : {weather?.coord?.lat}&deg;</span></span>
                         </div>
                         </>
-                        ) : <div className='flex items-center gap-3'>
-                              <motion.div initial={{opacity:0.4,scale:0.9}} animate={{opacity:0.9,scale:1}} 
-                              transition={{ repeat: Infinity,repeatType:'loop'}} >
-                              <img src="/images/unknown.png" alt="icon" height={40} width={40} />
+                        ):<div className='flex items-center gap-3'>
+                              <motion.div initial={{opacity:0.4,scale:0.9}} animate={{opacity:0.9,scale:1}}
+                              transition={{duration:2.3,repeat: Infinity,repeatType:'loop'}}>
+                              <img src="/images/unknown.png" alt="icon" height={45} width={45} />
                               </motion.div>
-                             <span>Oops!Weather Forecast not available at the moment!.</span>
+                             <span className='font-medium text-md md:text-lg'>Oops!Weather Forecast not available at the moment!.</span>
                            </div>
                       }
                      </div>
