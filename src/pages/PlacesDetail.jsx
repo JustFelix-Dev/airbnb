@@ -69,7 +69,7 @@ console.log(weather)
                     <div className='flex justify-between gap-4'>
                      <div>
                       {
-                        weather && weather.weather &&(
+                        weather && weather.weather ? (
                           <>
                         <div className='flex gap-6 border-b pb-4'>
                           <div>
@@ -88,10 +88,10 @@ console.log(weather)
                           <span className='flex-[40%]'><span className='flex items-center gap-1'>Latitude<TbWorldLatitude/> : {weather?.coord?.lat}&deg;</span></span>
                         </div>
                         </>
-                        )
+                        ) : "Weather Forecast Not Available!"
                       }
                      </div>
-                    <div>
+                    <div className='border border=-primary'>
                       <h2 className='text-2xl font-bold'>What this Place has to Offer You:</h2>
                       <div className='flex  items-center justify-center p-4 flex-wrap gap-4 max-w-sm'>
                         {
@@ -107,7 +107,7 @@ console.log(weather)
                       </div>
                     </div>
                     </div>
-                  <div className='mt-4  py-4 border-t'>
+                  <div className='mt-4 border border-green-800 py-4 border-t'>
                   <h2 className="text-xl font-bold"> Extra info:</h2>
                   </div>
                   <div className='mb-4 mt-2 text-sm text-gray-900 leading-5'>
