@@ -90,7 +90,7 @@ const AddressLink = ({children}) => {
 
            }
          <div className='flex justify-between'>
-          <a className='flex items-center gap-1 my-3 block font-semibold underline' target='blank' href={'https://maps.google.com/?q='+ children}><BiCurrentLocation/>{children}
+          <a className='flex items-center gap-1 my-3 block font-semibold underline' target='blank' href={'https://maps.google.com/?q='+ children}><BiCurrentLocation/> <span className='hidden md:block'>{children}</span>
          </a>
           <div>
             <div onClick={openModal} className='flex cursor-pointer hover:underline items-center gap-1'> <span><svg fill="#333" width={20} height={20} stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
