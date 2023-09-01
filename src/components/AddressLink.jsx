@@ -34,7 +34,7 @@ const AddressLink = ({children}) => {
            {  isModal && (
             <motion.div exit={{y:40,opacity:0}} initial={{y:40,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1,delay:0.2,type:'spring',stiffness:100}} className='bg-[whitesmoke] blur-1 shareBox w-[50%] h-[40%] min-w-[319px] left-[5%]
               fixed top-[20%] sm:left-[25%] bottom-[30%] sm:right-[30%] z-10 border border-primary rounded-xl p-4'>
-                <motion.div  exit={{y:40,opacity:0}} initial={{y:40,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1,delay:0.5,type:'spring',stiffness:100}} >
+                <motion.div  exit={{y:40,opacity:0,delay:0.3}} initial={{y:40,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1,delay:0.5,type:'spring',stiffness:100}} >
                   <div className='flex justify-between'>
                   <h1 className='text-xl'>Share this Place:</h1>
                   <span onClick={closeModal}><svg width={20} height={20} className='cursor-pointer rounded-md bg-black' fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
