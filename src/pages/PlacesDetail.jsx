@@ -67,9 +67,9 @@ console.log(weather)
                         <BookingWidget place={place}/>
                       </div>
                   </div>
-                  <div className="bg-white border border-red-800 -mx-8 px-8 py-8 border-t">
+                  <div className="bg-white border border-red-800 mx-0 sm:-mx-8 px-8 py-8 border-t">
                     <div className='flex justify-between gap-4'>
-                     <div>
+                     <div className='border'>
                       {
                         weather && weather.weather ? (
                           <>
@@ -95,11 +95,11 @@ console.log(weather)
                               transition={{duration:2.3,repeat: Infinity,repeatType:'loop'}}>
                               <img src="/images/unknown.png" alt="icon" height={45} width={45} />
                               </motion.div>
-                             <span className='font-medium text-md md:text-lg'>Oops!Weather Forecast not available at the moment!.</span>
+                             <span className='font-semibold text-lg md:text-xl w-[20ch]'>Oops!Weather Forecast not available at the moment!.</span>
                            </div>
                       }
                      </div>
-                    <div className=''>
+                    <div className='border'>
                       <h2 className='text-2xl font-bold'>What this Place has to Offer You:</h2>
                       <div className='flex  items-center justify-center p-4 flex-wrap gap-4 max-w-sm'>
                         {
