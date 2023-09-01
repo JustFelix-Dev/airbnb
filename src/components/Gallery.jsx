@@ -25,7 +25,7 @@ const Gallery = ({place}) => {
 
   return (
          <>
-          <div className="mx-auto max-w-5xl relative">
+          <div className="sm:mx-auto max-w-5xl relative">
                   <div className=" grid gap-2 grid-cols-2 md:grid-cols-[2fr_1fr_1fr] rounded-2xl overflow-hidden">
                     <div>
                         {place.photos?.[0] && (
@@ -37,21 +37,21 @@ const Gallery = ({place}) => {
                     <div className='md:hidden'>
                         {place.photos?.[1] && (
                             <div>
-                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[0]} />
+                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[1]} />
                             </div>
                         )}
                     </div>
                     <div className='md:hidden'>
                         {place.photos?.[2] && (
                             <div>
-                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[0]} />
+                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[2]} />
                             </div>
                         )}
                     </div>
                     <div className='md:hidden'>
                         {place.photos?.[3] && (
                             <div>
-                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[0]} />
+                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[3]} />
                             </div>
                         )}
                     </div>
@@ -82,4 +82,4 @@ const Gallery = ({place}) => {
   )
 }
 
-export default Gallery
+export default Gallery;
