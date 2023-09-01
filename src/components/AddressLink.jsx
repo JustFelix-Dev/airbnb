@@ -41,47 +41,47 @@ const AddressLink = ({children}) => {
                   <div className=' flex flex-wrap justify-center items-center gap-4 max-w-md mx-auto p-2 mt-2'>
                     <div className='flex-[20%] md:flex-[30%] flex justify-center'>
                       <FacebookShareButton url={airbnb} quote='Go ahead and Share' hashtag='#airbnb'>
-                        <FacebookIcon size={60} round={true}/>
+                        <FacebookIcon size={40} round={true}/>
                         </FacebookShareButton>  
                     </div>
                     <div className='flex-[20%] md:flex-[30%] flex justify-center'>
                       <TwitterShareButton url={airbnb} title='My AirBnb Reservation!'>
-                        <TwitterIcon size={60} round={true}/>
+                        <TwitterIcon size={40} round={true}/>
                         </TwitterShareButton>  
                     </div>
                     <div className='flex-[20%] md:flex-[30%] flex justify-center'>
                       <LinkedinShareButton url={airbnb} title='My Airbnb Reservation!' summary='A look at the luxurious and state-of-the-art apartment provided at Airbnb!' source='AirBnb'>
-                        <LinkedinIcon  size={60} round={true}/>
+                        <LinkedinIcon  size={40} round={true}/>
                         </LinkedinShareButton>  
                     </div>
                     <div className='flex-[20%] md:flex-[30%] flex justify-center'>
                       <EmailShareButton url={airbnb} subject='My AirBnb Reservation!' body={user?.email}>
-                        <EmailIcon  size={60} round={true}/>
+                        <EmailIcon  size={40} round={true}/>
                         </EmailShareButton>  
                     </div>
                     <div className='flex-[20%] md:flex-[30%] flex justify-center'>
                       <WhatsappShareButton url={airbnb} title='My Airbnb Reservation!'>
-                        <WhatsappIcon  size={60} round={true}/>
+                        <WhatsappIcon  size={40} round={true}/>
                         </WhatsappShareButton>  
                     </div>
                     <div className='flex-[20%] md:flex-[30%] flex justify-center'>
                       <TelegramShareButton url={airbnb} title='My Airbnb Reservation!'>
-                        <TelegramIcon  size={60} round={true}/>
+                        <TelegramIcon  size={40} round={true}/>
                         </TelegramShareButton>  
                     </div>
                     <div className='flex-[20%] md:flex-[30%] flex justify-center'>
                       <RedditShareButton url={airbnb} title='My Airbnb Reservation!'>
-                        <RedditIcon  size={60} round={true}/>
+                        <RedditIcon  size={40} round={true}/>
                         </RedditShareButton>  
                     </div>
                     <div className='flex-[20%] md:flex-[30%] flex justify-center'>
                       <ViberShareButton url={airbnb} title='My Airbnb Reservation!'>
-                        <ViberIcon  size={60} round={true}/>
+                        <ViberIcon  size={40} round={true}/>
                         </ViberShareButton>  
                     </div>
                     <div className='flex-[20%] md:flex-[30%] flex justify-center'>
                       <PinterestShareButton url={airbnb} media={''} description='A look at the luxurious and state-of-the-art apartment provided at Airbnb!'>
-                        <PinterestIcon  size={60} round={true}/>
+                        <PinterestIcon  size={40} round={true}/>
                         </PinterestShareButton>  
                     </div>
                   </div>
