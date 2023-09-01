@@ -9,6 +9,7 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { userContext } from '../ContextHook/userContext';
 import { toast } from 'react-toastify';
+import { AnimatePresence, motion } from 'framer-motion';
 
 
 const BookingPayment = ({ booking }) => {
@@ -81,8 +82,9 @@ const BookingPayment = ({ booking }) => {
 
     }
   return (
-    <>   
-         { booking && isModal && <div id='myModal'  className='modal-confirm w-[340px] bg-white text-black fixed flex items-center py-8 px-4 rounded-2xl text-center z-10 top-[15%] left-[5%] sm:left-[25%] md:left-[35%] right-[35%] border border-primary'>
+    <>     <AnimatePresence>
+         { booking && isModal &&
+          <motion.div exit={{y:50,opacity:0}} initial={{y:50,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1,type:'spring',stiffness:100}}  id='myModal'  className='modal-confirm w-[340px] bg-white text-black fixed flex items-center py-8 px-4 rounded-2xl text-center z-10 top-[15%] left-[5%] sm:left-[25%] md:left-[35%] right-[35%] border border-primary'>
             <div  >
             <p className='text-xl'> {order ?'Are you sure you want to cancel this reservation ?':'Are you sure you want to delete this booking ?'}</p>
                <div className='flex modalbutton justify-between mt-4'>
@@ -90,7 +92,8 @@ const BookingPayment = ({ booking }) => {
                 <button onClick={ order ? ()=>handleOrder(booking._id) : ()=>handleDelete(booking._id)} className='bg-green-800 text-white border border-white py-1 px-4'>Proceed</button>
                </div>
             </div>
-          </div>}
+          </motion.div>}
+          </AnimatePresence>
       <div id='bodyPage' className='bg-gray-200 text-black p-3 rounded-xl'>
         <div className=' flex  flex-row bookingpayment justify-between gap-2 border-t border-white-300 mt-2 py-2'>
             <div className='flex flex-col gap-1'>

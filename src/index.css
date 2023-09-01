@@ -232,6 +232,8 @@ button.primary{
     }
     .modalbutton{
       flex-direction: column;
+      text-align: center;
+      gap: 1rem;
     }
   }
   @media screen and (max-width:510px){
