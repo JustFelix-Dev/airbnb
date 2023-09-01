@@ -92,7 +92,7 @@ const BookingPayment = ({ booking }) => {
             </div>
           </div>}
       <div id='bodyPage' className='bg-gray-200 text-black p-3 rounded-xl'>
-        <div className=' flex  flex-col sm:flex-row justify-between gap-2 border-t border-white-300 mt-2 py-2'>
+        <div className=' flex  flex-col items-center sm:flex-row justify-between gap-2 border-t border-white-300 mt-2 py-2'>
             <div className='flex flex-col gap-1'>
           <div >
             <h1 className='underline  px-2 rounded-sm text-black my-1'>Check-In Date:</h1>
