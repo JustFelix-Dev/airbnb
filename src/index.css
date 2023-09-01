@@ -230,14 +230,6 @@ button.primary{
       /* align-items: center; */
       gap: 2rem;
     }
-    .payment{
-      flex-direction: row;
-      gap: 3rem;
-    }
-    .price{
-      order: 2;
-      align-self: center;
-    }
   }
   @media screen and (max-width:510px){
     .newtons-cradle.index{
