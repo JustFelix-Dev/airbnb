@@ -34,7 +34,7 @@ const Gallery = ({place}) => {
                             </div>
                         )}
                     </div>
-                    <div className='grid '>
+                    <div className=' block md:grid '>
                        {place.photos?.[1] && (
                             <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[1]}/>
                         )}
