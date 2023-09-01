@@ -68,8 +68,8 @@ console.log(weather)
                       </div>
                   </div>
                   <div className="bg-white  mx-0 sm:-mx-8 px-1 sm:px-8 py-8 border-t">
-                    <div className='flex flex-col sm:flex-row justify-center items-center sm:justify-between gap-4'>
-                     <div className=''>
+                    <div className='flex flex-col sm:flex-row  items-center sm:justify-between gap-4'>
+                     <div className='border-b'>
                       {
                         weather && weather.weather ? (
                           <>
