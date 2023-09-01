@@ -76,10 +76,20 @@ const BookingWidget = ({place}) => {
             )}
             </div>
             <button onClick={handleBooking} className="primary"> 
-                Reserve
+            { !isLoading ?
+               <div>
+               Reserve
                 {numOfNight > 0 &&  (
                     <span> :${numOfNight * place.price }</span>
                 )}
+                </div> 
+                : (<div className="newtons-cradle">
+                <div className="newtons-cradle__dot"></div>
+                <div className="newtons-cradle__dot"></div>
+                <div className="newtons-cradle__dot"></div>
+                <div className="newtons-cradle__dot"></div>
+                </div>)
+            }
             </button>
         </div>
           </>

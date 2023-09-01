@@ -27,12 +27,11 @@ const BookingPlace = () => {
   return (
          <>
              <div className="my-8 max-w-4xl mx-auto shadow-2xl p-4">
-           <h1 className='text-3xl'>{booking.place.title}</h1>
+           <h1 className=' mb-4 text-lg sm:text-xl md:text-3xl md:mb-0'>{booking.place.title}</h1>
              <AddressLink>{booking.place.address}</AddressLink>
              <div className="bg-primary text-white p-4 mb-4 rounded-2xl">
                 <h2>Your Booking Information:</h2>
                   <BookingPayment booking={booking}/>
-                      
              </div>
                <h2 className='text-xl font-medium p-4'>Where you would be staying :</h2>
              <Gallery place={booking.place}/>
