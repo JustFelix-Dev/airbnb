@@ -82,10 +82,10 @@ const BookingPayment = ({ booking }) => {
     }
   return (
     <>   
-         { booking && isModal && <div id='myModal'  className='modal-confirm w-[31%] bg-white text-black fixed flex items-center py-8 px-4 rounded-2xl text-center z-10 top-[15%] left-[35%] right-[35%] border border-primary'>
+         { booking && isModal && <div id='myModal'  className='modal-confirm w-[50%] bg-white text-black fixed flex items-center py-8 px-4 rounded-2xl text-center z-10 top-[15%] left-[35%] right-[35%] border border-primary'>
             <div  >
             <p className='text-xl'> {order ?'Are you sure you want to cancel this reservation ?':'Are you sure you want to delete this booking ?'}</p>
-               <div className='flex justify-between mt-4'>
+               <div className='flex modalbutton justify-between mt-4'>
                 <button onClick={closeModal} className='bg-white flex items-center gap-1 text-primary border border-primary py-1 px-4'> <span>Cancel</span></button>
                 <button onClick={ order ? ()=>handleOrder(booking._id) : ()=>handleDelete(booking._id)} className='bg-green-800 text-white border border-white py-1 px-4'>Proceed</button>
                </div>

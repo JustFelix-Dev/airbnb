@@ -230,6 +230,9 @@ button.primary{
       /* align-items: center; */
       gap: 2rem;
     }
+    .modalbutton{
+      flex-direction: column;
+    }
   }
   @media screen and (max-width:510px){
     .newtons-cradle.index{
