@@ -54,7 +54,7 @@ console.log(weather)
                   <div className='mt-8 mb-8 gap-8 grid grid-cols-1 md:grid-cols-[2fr_1fr]'>
                     <div className='border border-green-800'>
                     <div className="my-4">
-                    <h2 className="font-semibold text-2xl"> Description </h2>
+                    <h2 className="font-semibold text-2xl"> Description :</h2>
                     <p>{place.description || 'No description available' }</p>
                      </div>
                         <div className='bg-primary rounded-xl flex flex-col gap-2 max-w-xs  py-4 px-4 text-white font-medium'>
@@ -67,8 +67,8 @@ console.log(weather)
                         <BookingWidget place={place}/>
                       </div>
                   </div>
-                  <div className="bg-white border border-red-800 mx-0 sm:-mx-8 px-8 py-8 border-t">
-                    <div className='flex justify-between gap-4'>
+                  <div className="bg-white border border-red-800 mx-0 sm:-mx-8 px-1 md:px-8 py-8 border-t">
+                    <div className='flex flex-col sm:flex-row justify-between gap-4'>
                      <div className='border'>
                       {
                         weather && weather.weather ? (
@@ -118,7 +118,7 @@ console.log(weather)
                   <div className='mt-4 py-4 border-t'>
                   <h2 className="text-xl font-bold"> Extra info:</h2>
                   </div>
-                  <div className='mb-4 mt-2 text-sm text-gray-900 leading-5'>
+                  <div className=' md:mb-3 mt-2 text-sm text-gray-900 leading-5'>
                     <p className='text-lg'>{place.extraInfo}</p>
                   </div>
                   </div>

@@ -7,10 +7,10 @@ const Gallery = ({place}) => {
 
     if(showAllPhotos){
         return (
-              <div className='absolute inset-0 bg-black text-white min-h-screen'>
+              <div className='absolute inset-0 bg-black text-white h-full'>
                 <div className='bg-black p-8 grid gap-4'>
                     <div>
-                        <h1 className='mr-48 text-lg sm:text-xl md:text-3xl'>Photos of {place.title}</h1>
+                        <h1 className='text-lg sm:text-xl md:text-3xl truncate'>Photos of {place.title}</h1>
                         <button onClick={()=> setShowAllPhotos(false)} className='fixed flex items-center right-12 top-8 flex gap-2 py-2 px-4 rounded-2xl bg-white text-black'><AiFillCloseCircle/><span className='hidden md:block'>Close Photo</span></button>
                     </div>
                      {place?.photos?.length > 0 && place.photos.map(photo=>(

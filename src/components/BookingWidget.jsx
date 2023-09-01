@@ -40,7 +40,6 @@ const BookingWidget = ({place}) => {
             <div className=' py-3 px-4'>
                 <label htmlFor="checkIn">Check-In:</label>
                 <input type="date"
-                  
                  value={checkIn}
                   onChange={(e)=>setCheckIn(e.target.value)} required />
             </div>
