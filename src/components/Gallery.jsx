@@ -25,7 +25,7 @@ const Gallery = ({place}) => {
 
   return (
          <>
-          <div className="sm:mx-auto max-w-5xl relative">
+          <div className="mx-1 sm:mx-auto max-w-5xl relative">
                   <div className=" grid gap-2 grid-cols-2 md:grid-cols-[2fr_1fr_1fr] rounded-2xl overflow-hidden">
                     <div>
                         {place.photos?.[0] && (
