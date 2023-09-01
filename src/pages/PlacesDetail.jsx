@@ -46,7 +46,7 @@ console.log(weather)
          <>
          {place && 
             (<div className='mt-4 max-w-5xl shadow-lg  mx-auto px-8 pt-8'>
-                <h1 className='text-3xl'>{place.title}</h1>
+                <h1 className='text-lg sm:text-xl md:text-3xl'>{place.title}</h1>
                    <AddressLink>{place.address}</AddressLink>
                    <Gallery place={place}/>
                   <div className='mt-8 mb-8 gap-8 grid grid-cols-1 md:grid-cols-[2fr_1fr]'>
