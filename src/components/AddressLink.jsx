@@ -29,7 +29,7 @@ const AddressLink = ({children}) => {
   return (
          <>
            {  isModal && (
-            <div className='bg-[whitesmoke] blur-1 shareBox w-[50%] h-[50%] min-w-[319px]
+            <div className='bg-[whitesmoke] blur-1 shareBox w-[50%] h-[40%] min-w-[319px]
               fixed top-[20%] left-[25%] bottom-[30%] right-[30%] z-10 border border-primary rounded-xl p-4'>
                 <div>
                   <div className='flex justify-between'>
@@ -39,47 +39,47 @@ const AddressLink = ({children}) => {
                 </svg></span>
                   </div>
                   <div className=' flex flex-wrap justify-center items-center gap-4 max-w-md mx-auto p-2 mt-2'>
-                    <div className='flex-[20%] md:flex-[30%] flex justify-center'>
+                    <div className='flex-[23%] md:flex-[30%] flex justify-center'>
                       <FacebookShareButton url={airbnb} quote='Go ahead and Share' hashtag='#airbnb'>
                         <FacebookIcon size={40} round={true}/>
                         </FacebookShareButton>  
                     </div>
-                    <div className='flex-[20%] md:flex-[30%] flex justify-center'>
+                    <div className='flex-[23%] md:flex-[30%] flex justify-center'>
                       <TwitterShareButton url={airbnb} title='My AirBnb Reservation!'>
                         <TwitterIcon size={40} round={true}/>
                         </TwitterShareButton>  
                     </div>
-                    <div className='flex-[20%] md:flex-[30%] flex justify-center'>
+                    <div className='flex-[23%] md:flex-[30%] flex justify-center'>
                       <LinkedinShareButton url={airbnb} title='My Airbnb Reservation!' summary='A look at the luxurious and state-of-the-art apartment provided at Airbnb!' source='AirBnb'>
                         <LinkedinIcon  size={40} round={true}/>
                         </LinkedinShareButton>  
                     </div>
-                    <div className='flex-[20%] md:flex-[30%] flex justify-center'>
+                    <div className='flex-[23%] md:flex-[30%] flex justify-center'>
                       <EmailShareButton url={airbnb} subject='My AirBnb Reservation!' body={user?.email}>
                         <EmailIcon  size={40} round={true}/>
                         </EmailShareButton>  
                     </div>
-                    <div className='flex-[20%] md:flex-[30%] flex justify-center'>
+                    <div className='flex-[23%] md:flex-[30%] flex justify-center'>
                       <WhatsappShareButton url={airbnb} title='My Airbnb Reservation!'>
                         <WhatsappIcon  size={40} round={true}/>
                         </WhatsappShareButton>  
                     </div>
-                    <div className='flex-[20%] md:flex-[30%] flex justify-center'>
+                    <div className='flex-[23%] md:flex-[30%] flex justify-center'>
                       <TelegramShareButton url={airbnb} title='My Airbnb Reservation!'>
                         <TelegramIcon  size={40} round={true}/>
                         </TelegramShareButton>  
                     </div>
-                    <div className='flex-[20%] md:flex-[30%] flex justify-center'>
+                    <div className='flex-[23%] md:flex-[30%] flex justify-center'>
                       <RedditShareButton url={airbnb} title='My Airbnb Reservation!'>
                         <RedditIcon  size={40} round={true}/>
                         </RedditShareButton>  
                     </div>
-                    <div className='flex-[20%] md:flex-[30%] flex justify-center'>
+                    <div className='flex-[23%] md:flex-[30%] flex justify-center'>
                       <ViberShareButton url={airbnb} title='My Airbnb Reservation!'>
                         <ViberIcon  size={40} round={true}/>
                         </ViberShareButton>  
                     </div>
-                    <div className='flex-[20%] md:flex-[30%] flex justify-center'>
+                    <div className='flex-[23%] md:flex-[30%] flex justify-center'>
                       <PinterestShareButton url={airbnb} media={''} description='A look at the luxurious and state-of-the-art apartment provided at Airbnb!'>
                         <PinterestIcon  size={40} round={true}/>
                         </PinterestShareButton>  
