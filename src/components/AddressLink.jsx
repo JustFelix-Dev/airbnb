@@ -29,7 +29,7 @@ const AddressLink = ({children}) => {
   return (
          <>
            {  isModal && (
-            <div className='bg-[whitesmoke] blur-1 shareBox w-[50%] h-[40%] min-w-[319px] left-[20%]
+            <div className='bg-[whitesmoke] blur-1 shareBox w-[50%] h-[40%] min-w-[319px] left-[5%]
               fixed top-[20%] sm:left-[25%] bottom-[30%] sm:right-[30%] z-10 border border-primary rounded-xl p-4'>
                 <div>
                   <div className='flex justify-between'>
