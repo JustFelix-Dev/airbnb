@@ -67,7 +67,7 @@ console.log(weather)
                         <BookingWidget place={place}/>
                       </div>
                   </div>
-                  <div className="bg-white border border-red-800 mx-0 sm:-mx-8 px-1 md:px-8 py-8 border-t">
+                  <div className="bg-white border border-red-800 mx-0 sm:-mx-8 px-1 sm:px-8 py-8 border-t">
                     <div className='flex flex-col sm:flex-row justify-between gap-4'>
                      <div className='border'>
                       {
@@ -91,7 +91,7 @@ console.log(weather)
                         </div>
                         </>
                         ):<div className='flex items-center gap-3'>
-                              <motion.div initial={{opacity:0.4,scale:0.9}} animate={{opacity:0.9,scale:1}}
+                              <motion.div initial={{opacity:0.2,scale:0.9}} animate={{opacity:0.9,scale:1}}
                               transition={{duration:4,repeat: Infinity,repeatType:'reverse'}}>
                               <img src="/images/unknown.png" alt="icon" height={45} width={45} />
                               </motion.div>
@@ -100,14 +100,14 @@ console.log(weather)
                       }
                      </div>
                     <div className='border'>
-                      <h2 className='text-2xl font-bold'>What this Place has to Offer You:</h2>
+                      <h2 className='text-lg sm:text-2xl font-bold'>What this Place has to Offer You:</h2>
                       <div className='flex  items-center justify-center p-4 flex-wrap gap-4 max-w-sm'>
                         {
                           place.perks && (
                                 place.perks.map((perk,idx)=>(
                                   <div key={idx} className=' flex-[40%] flex gap-2  items-center'>
                                     <img src={`/images/${perk}.png`} alt="wifiIcon"height={20} width={20} />
-                                    <span className='text-xl capitalize'>{perk}</span>
+                                    <span className='text-lg sm:text-xl capitalize'>{perk}</span>
                                   </div>
                                 ))
                           )
@@ -118,7 +118,7 @@ console.log(weather)
                   <div className='mt-4 py-4 border-t'>
                   <h2 className="text-xl font-bold"> Extra info:</h2>
                   </div>
-                  <div className=' md:mb-3 mt-2 text-sm text-gray-900 leading-5'>
+                  <div className=' mb-3 md:mt-2 text-sm text-gray-900 leading-5'>
                     <p className='text-lg'>{place.extraInfo}</p>
                   </div>
                   </div>
