@@ -92,7 +92,7 @@ console.log(weather)
                         </>
                         ):<div className='flex items-center gap-3'>
                               <motion.div initial={{opacity:0.4,scale:0.9}} animate={{opacity:0.9,scale:1}}
-                              transition={{duration:2.3,repeat: Infinity,repeatType:'loop'}}>
+                              transition={{duration:4,repeat: Infinity,repeatType:'reverse'}}>
                               <img src="/images/unknown.png" alt="icon" height={45} width={45} />
                               </motion.div>
                              <span className='font-semibold text-lg md:text-xl w-[20ch]'>Oops!Weather Forecast not available at the moment!.</span>
