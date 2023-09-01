@@ -227,8 +227,16 @@ button.primary{
   @media screen and (max-width:520px){
     .bookingpayment{
       flex-direction: column;
-      align-items: center;
+      /* align-items: center; */
       gap: 2rem;
+    }
+    .payment{
+      flex-direction: row;
+      gap: 3rem;
+    }
+    .price{
+      order: 2;
+      align-self: center;
     }
   }
   @media screen and (max-width:510px){

@@ -120,8 +120,8 @@ const BookingPayment = ({ booking }) => {
             </div>
         </div>
             </div>
-            <div className='flex flex-col items-center justify-between'>
-                <h1>Total Price: <span className='text-2xl font-medium'>${booking.price}</span></h1>
+            <div className='flex flex-col payment items-center justify-between'>
+                <h1 className='price'>Total Price: <span className='text-2xl font-medium'>${booking.price}</span></h1>
                 <div>
                   {
                     booking.status && booking.status == "Paid" ?
