@@ -14,6 +14,7 @@ const PlacesDetail = () => {
     const [ place,setPlace ] = useState(null);
     const [ weather,setWeather] = useState(null);
     const myApi = "f5fb28c0d0dd7eefc82f52937d88b038";
+    const [ isLoading,setIsLoading ] = useState(true);
 
 useEffect(()=>{
     if(!id)  return
@@ -21,6 +22,7 @@ useEffect(()=>{
            const {data} = response;
            console.log(data)
            setPlace(data)
+           setIsLoading(false)
       }) 
 },[id])
 
@@ -43,7 +45,19 @@ console.log(weather)
 
   return (
          <>
-         {place && 
+          <AnimatePresence>
+          { isLoading && (
+           <motion.div exit={{opacity:0}}  className='h-[80vh] w-full flex items-center justify-center bg-white'>
+                   <div className="newtons-cradle index">
+                  <div className="newtons-cradle__dot"></div>
+                  <div className="newtons-cradle__dot"></div>
+                  <div className="newtons-cradle__dot"></div>
+                  <div className="newtons-cradle__dot"></div>
+                  </div>
+       </motion.div>
+         ) }
+         </AnimatePresence> 
+         { !isLoading && place && 
             (<div className='mt-4 max-w-5xl shadow-lg  mx-auto px-2 sm:px-8 pt-8'>
                 <h1 className=' mb-4 text-lg sm:text-xl md:text-3xl md:mb-0'>{place.title}</h1>
                    <AddressLink>{place.address}</AddressLink>
