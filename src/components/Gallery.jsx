@@ -34,7 +34,28 @@ const Gallery = ({place}) => {
                             </div>
                         )}
                     </div>
-                    <div className='grid '>
+                    <div>
+                        {place.photos?.[0] && (
+                            <div>
+                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[0]} />
+                            </div>
+                        )}
+                    </div>
+                    <div>
+                        {place.photos?.[0] && (
+                            <div>
+                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[0]} />
+                            </div>
+                        )}
+                    </div>
+                    <div>
+                        {place.photos?.[0] && (
+                            <div>
+                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[0]} />
+                            </div>
+                        )}
+                    </div>
+                    {/* <div className='grid '>
                        {place.photos?.[1] && (
                             <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[1]}/>
                         )}
@@ -53,7 +74,7 @@ const Gallery = ({place}) => {
                                 <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover relative top-2' src={place.photos[4]}/>
                                 )}
                             </div>
-                    </div>
+                    </div> */}
                   </div>
                   <button onClick={()=>setShowAllPhotos(true)} className='absolute flex items-center bottom-2 right-2 bg-white font-medium text-black rounded-2xl border border-black py-2 px-4 '><CgMenuGridO/><span className='hidden md:block'>Show more Photos</span></button>
                   </div>
