@@ -39,17 +39,17 @@ const AddressLink = ({children}) => {
                 </svg></span>
                   </div>
                   <div className=' flex flex-wrap justify-center items-center gap-4 max-w-md mx-auto p-2 mt-2'>
-                    <div className='sm:flex-[20%] md:flex-[30%] flex justify-center'>
+                    <div className='flex-[20%] md:flex-[30%] flex justify-center'>
                       <FacebookShareButton url={airbnb} quote='Go ahead and Share' hashtag='#airbnb'>
                         <FacebookIcon size={60} round={true}/>
                         </FacebookShareButton>  
                     </div>
-                    <div className='sm:flex-[20%] md:flex-[30%] flex justify-center'>
+                    <div className='flex-[20%] md:flex-[30%] flex justify-center'>
                       <TwitterShareButton url={airbnb} title='My AirBnb Reservation!'>
                         <TwitterIcon size={60} round={true}/>
                         </TwitterShareButton>  
                     </div>
-                    <div className='sm:flex-[20%] md:flex-[30%] flex justify-center'>
+                    <div className='flex-[20%] md:flex-[30%] flex justify-center'>
                       <LinkedinShareButton url={airbnb} title='My Airbnb Reservation!' summary='A look at the luxurious and state-of-the-art apartment provided at Airbnb!' source='AirBnb'>
                         <LinkedinIcon  size={60} round={true}/>
                         </LinkedinShareButton>  
