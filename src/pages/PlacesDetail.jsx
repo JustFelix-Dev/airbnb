@@ -6,7 +6,7 @@ import Gallery from '../components/Gallery';
 import AddressLink from '../components/AddressLink';
 import { TbClockBolt,TbWorldLongitude,TbWorldLatitude } from 'react-icons/tb';
 import { WiHumidity } from 'react-icons/wi';
-import { motion } from 'framer-motion';
+import { motion,AnimatePresence } from 'framer-motion';
 
 
 const PlacesDetail = () => {
