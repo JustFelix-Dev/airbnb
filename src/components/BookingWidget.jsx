@@ -33,13 +33,14 @@ const BookingWidget = ({place}) => {
 
   return (
           <>
-           <div className="bg-white shadow-2xl border-t-2 border-primary p-4 rounded-2xl">
+           <div className="bg-white shadow-2xl border-t-2 border-primary p-4 rounded-2xl w-full">
             <p className='text-2xl text-center'>${place.price}/<span className='text-gray-500'>night</span></p>
             <div className="border rounded-2xl mt-4">
             <div className="flex flex-col gap-2 sm:flex-row">
             <div className=' py-3 px-4'>
                 <label htmlFor="checkIn">Check-In:</label>
                 <input type="date"
+                  
                  value={checkIn}
                   onChange={(e)=>setCheckIn(e.target.value)} required />
             </div>
