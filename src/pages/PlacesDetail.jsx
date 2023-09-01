@@ -95,7 +95,7 @@ console.log(weather)
                               transition={{duration:4,repeat: Infinity,repeatType:'reverse'}}>
                               <img src="/images/unknown.png" alt="icon" height={45} width={45} />
                               </motion.div>
-                             <span className='font-semibold text-lg md:text-xl w-[20ch]'>Oops!Weather Forecast not available at the moment!.</span>
+                             <span className='font-semibold text-lg md:text-xl max-w-[20ch]'>Oops!Weather Forecast not available at the moment!.</span>
                            </div>
                       }
                      </div>
