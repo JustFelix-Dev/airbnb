@@ -34,21 +34,21 @@ const Gallery = ({place}) => {
                             </div>
                         )}
                     </div>
-                    <div className=' block md:grid '>
+                    <div className='grid '>
                        {place.photos?.[1] && (
                             <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[1]}/>
                         )}
-                            <div className='overflow-hidden'>
+                            <div className='hidden md:block overflow-hidden'>
                          {place.photos?.[2] && (
                                 <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover relative top-2' src={place.photos[2]}/>
                                 )}
                             </div>
                     </div>
-                    <div className='grid '>
+                    <div className='grid'>
                        {place.photos?.[3] && (
                             <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[3]}/>
                         )}
-                            <div className='overflow-hidden '>
+                            <div className='hidden md:block overflow-hidden '>
                          {place.photos?.[4] && (
                                 <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover relative top-2' src={place.photos[4]}/>
                                 )}
