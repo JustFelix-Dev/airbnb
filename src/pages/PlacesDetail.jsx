@@ -52,7 +52,7 @@ console.log(weather)
                    <AddressLink>{place.address}</AddressLink>
                    <Gallery place={place}/>
                   <div className='mt-8 mb-8 gap-8 grid grid-cols-1 md:grid-cols-[2fr_1fr]'>
-                    <div className='border border-green-800'>
+                    <div className=''>
                     <div className="my-4">
                     <h2 className="font-semibold text-2xl"> Description :</h2>
                     <p>{place.description || 'No description available' }</p>
@@ -63,13 +63,13 @@ console.log(weather)
                         <p className='bg-white text-black w-auto px-2 py-1 rounded-md'>Max No. of Guests: {place.guests}</p>
                         </div>
                     </div>
-                      <div className='flex border border-primary items-center'>
+                      <div className='flex  items-center'>
                         <BookingWidget place={place}/>
                       </div>
                   </div>
-                  <div className="bg-white border border-red-800 mx-0 sm:-mx-8 px-1 sm:px-8 py-8 border-t">
+                  <div className="bg-white  mx-0 sm:-mx-8 px-1 sm:px-8 py-8 border-t">
                     <div className='flex flex-col sm:flex-row justify-between gap-4'>
-                     <div className='border'>
+                     <div className=''>
                       {
                         weather && weather.weather ? (
                           <>
@@ -99,7 +99,7 @@ console.log(weather)
                            </div>
                       }
                      </div>
-                    <div className='border'>
+                    <div className=''>
                       <h2 className='text-lg sm:text-2xl font-bold'>What this Place has to Offer You:</h2>
                       <div className='flex  items-center justify-center p-4 flex-wrap gap-4 max-w-sm'>
                         {
