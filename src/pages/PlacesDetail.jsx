@@ -6,6 +6,8 @@ import Gallery from '../components/Gallery';
 import AddressLink from '../components/AddressLink';
 import { TbClockBolt,TbWorldLongitude,TbWorldLatitude } from 'react-icons/tb';
 import { WiHumidity } from 'react-icons/wi';
+import { motion } from 'framer-motion';
+
 
 const PlacesDetail = () => {
     const {id} = useParams()
@@ -50,7 +52,7 @@ console.log(weather)
                    <AddressLink>{place.address}</AddressLink>
                    <Gallery place={place}/>
                   <div className='mt-8 mb-8 gap-8 grid grid-cols-1 md:grid-cols-[2fr_1fr]'>
-                    <div>
+                    <div className='border border-green-800'>
                     <div className="my-4">
                     <h2 className="font-semibold text-2xl"> Description </h2>
                     <p>{place.description || 'No description available' }</p>
@@ -61,7 +63,7 @@ console.log(weather)
                         <p className='bg-white text-black w-auto px-2 py-1 rounded-md'>Max No. of Guests: {place.guests}</p>
                         </div>
                     </div>
-                      <div className='flex items-center'>
+                      <div className='flex border border-primary items-center'>
                         <BookingWidget place={place}/>
                       </div>
                   </div>
@@ -88,10 +90,16 @@ console.log(weather)
                           <span className='flex-[40%]'><span className='flex items-center gap-1'>Latitude<TbWorldLatitude/> : {weather?.coord?.lat}&deg;</span></span>
                         </div>
                         </>
-                        ) : "Weather Forecast Not Available!"
+                        ) : <div className='flex items-center gap-3'>
+                              <motion.div initial={{opacity:0.4,scale:0.9}} animate={{opacity:0.9,scale:1}} 
+                              transition={{ repeat: Infinity,repeatType:'loop'}} >
+                              <img src="/images/unknown.png" alt="icon" height={40} width={40} />
+                              </motion.div>
+                             <span>Oops!Weather Forecast not available at the moment!.</span>
+                           </div>
                       }
                      </div>
-                    <div className='border border=-primary'>
+                    <div className=''>
                       <h2 className='text-2xl font-bold'>What this Place has to Offer You:</h2>
                       <div className='flex  items-center justify-center p-4 flex-wrap gap-4 max-w-sm'>
                         {
@@ -107,7 +115,7 @@ console.log(weather)
                       </div>
                     </div>
                     </div>
-                  <div className='mt-4 border border-green-800 py-4 border-t'>
+                  <div className='mt-4 py-4 border-t'>
                   <h2 className="text-xl font-bold"> Extra info:</h2>
                   </div>
                   <div className='mb-4 mt-2 text-sm text-gray-900 leading-5'>
