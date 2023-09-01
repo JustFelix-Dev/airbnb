@@ -85,8 +85,8 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                                 <div className='text-left p-4 leading-8 bg-white rounded-t-3xl font-semibold'>
                                     <h2>Basic Information:</h2>
                                     {user.admin &&(<div className='bg-primary rounded-lg text-white text-sm py-1 max-w-[5rem] select-none px-4'>Admin</div>)}
-                                     <div><span>Name: </span>{user.name}</div>
-                                     <div><span>Email: </span>{user.email}</div>
+                                     <div><span>Name: </span>{user?.name}</div>
+                                     <div><span>Email: </span>{user?.email}</div>
                                      <div className='flex items-center gap-2 status'><span>Status : Active</span><div className='activeIcon'></div></div>
                                      <button onClick={logout} className='primary flex items-center gap-1 justify-center max-w-sm mt-2'> {isLoading ? (<div className="newtons-cradle">
                                     <div className="newtons-cradle__dot"></div>
