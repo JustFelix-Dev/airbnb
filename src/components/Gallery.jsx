@@ -26,31 +26,31 @@ const Gallery = ({place}) => {
   return (
          <>
           <div className="mx-auto max-w-5xl relative">
-                  <div className=" grid gap-2 grid-cols-[1fr_1fr] grid-rows-[1fr_1fr] md:grid-cols-[2fr_1fr_1fr] md:grid-rows-none rounded-2xl overflow-hidden">
+                  <div className=" grid gap-2 sm:grid-cols-2 grid-cols-[2fr_1fr_1fr] rounded-2xl overflow-hidden">
                     <div>
                         {place.photos?.[0] && (
                             <div>
-                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer md:aspect-square object-cover' src={place.photos[0]} />
+                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[0]} />
                             </div>
                         )}
                     </div>
                     <div className='grid '>
                        {place.photos?.[1] && (
-                            <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer md:aspect-square object-cover' src={place.photos[1]}/>
+                            <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[1]}/>
                         )}
                             <div className='overflow-hidden'>
                          {place.photos?.[2] && (
-                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer md:aspect-square object-cover relative top-2' src={place.photos[2]}/>
+                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover relative top-2' src={place.photos[2]}/>
                                 )}
                             </div>
                     </div>
                     <div className='grid '>
                        {place.photos?.[3] && (
-                            <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer md:aspect-square object-cover' src={place.photos[3]}/>
+                            <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover' src={place.photos[3]}/>
                         )}
-                            <div className='overflow-hidden hidden md:block'>
+                            <div className='overflow-hidden '>
                          {place.photos?.[4] && (
-                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer md:aspect-square object-cover relative top-2' src={place.photos[4]}/>
+                                <img onClick={()=> setShowAllPhotos(true)} className='cursor-pointer aspect-square object-cover relative top-2' src={place.photos[4]}/>
                                 )}
                             </div>
                     </div>
