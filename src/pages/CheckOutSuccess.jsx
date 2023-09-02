@@ -8,7 +8,7 @@ const CheckOutSuccess = () => {
       
     return ( 
             <>
-            <div className="w-full h-[70vh] flex items-center">
+            <div className="px-4  sm:px-0 w-full h-[70vh] flex items-center">
              <div className=" shadow-2xl text-center border-t-2 border-primary  p-8 max-w-2xl mx-auto ">
                 <span className="flex justify-center p-4"><svg className=" w-[50px] h-[50px] sm:w-[80px] h-[80px]" fill="none" stroke="green" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <motion.path initial={{opacity:0,scale:0.8,pathLength:0}} animate={{opacity:1,scale:1.1,pathLength:1}} transition={{duration:2,delay:0.5}} stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></motion.path>
