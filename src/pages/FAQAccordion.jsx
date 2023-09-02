@@ -19,7 +19,7 @@ const FAQAccordion = () => {
 
   return (
     <div className=" mt-8 border mx-auto">
-      <div className="bg-white p-4 rounded shadow-md w-[85%] max-w-6xl">
+      <div className="bg-white p-4 rounded shadow-md w-full max-w-6xl">
         <div className='flex gap-2 mb-2 items-center justify-center'>
             <img src="/images/airbnb.png" alt="airbnb-logo" height={40} width={40} />
         <h2 className="text-xl font-semibold text-center">Frequently Asked Questions</h2>
@@ -34,7 +34,7 @@ const FAQAccordion = () => {
           <div className="mt-2">{faq.answer}</div>
         </div>
       ))}
-      <div className="flex justify-center mt-4">
+      <div className="flex flex-wrap justify-center mt-4">
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index}
