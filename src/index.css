@@ -224,7 +224,13 @@ button.primary{
     padding: 0px 5px;
     white-space: nowrap;
   }
-
+ 
+  @media screen and (max-width:900px){
+    .leftChat{
+      position: fixed;
+      top:0;
+    }
+  }
   @media screen and (max-width:850px){
     .policies{
       flex-direction: column;
