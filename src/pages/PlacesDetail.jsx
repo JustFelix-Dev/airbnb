@@ -14,7 +14,7 @@ const PlacesDetail = () => {
     const [ place,setPlace ] = useState(null);
     const [ weather,setWeather] = useState(null);
     const myApi = "f5fb28c0d0dd7eefc82f52937d88b038";
-    const [ isLoading,setIsLoading ] = useState(true);
+    // const [ isLoading,setIsLoading ] = useState(true);
 
 useEffect(()=>{
     if(!id)  return
