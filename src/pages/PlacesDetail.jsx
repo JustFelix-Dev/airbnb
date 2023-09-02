@@ -41,7 +41,7 @@ useEffect(()=>{
   getWeather(place?.address);
 },[place])
 
-console.log(weather)
+console.log("Weather:",weather)
 
   return (
          <>
