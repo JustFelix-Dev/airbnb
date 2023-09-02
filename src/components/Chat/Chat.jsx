@@ -13,6 +13,7 @@ const Chat = () => {
     const { userChats,isUserChatsLoading,updateCurrentChat,userChatsError } = useContext(ChatContext);
     const [ showChat,setShowChat] = useState(false);
     const navigate = useNavigate();
+    const [ showChatUsers,setShowChatUsers] = useState(true);
     const chatRef = useRef();
     const navOpen = useRef();
 
@@ -33,8 +34,13 @@ const Chat = () => {
     }
 
     const closeChats=()=>{
-           chatRef.current.style.transform = 'translateX(-100%)';
+           setShowChatUsers(false);
            navOpen.current.style.display = 'block';
+    }
+
+    const openChats=()=>{
+        setShowChatUsers(true);
+        navOpen.current.style.display = 'none';
     }
 
     return ( 
@@ -46,7 +52,7 @@ const Chat = () => {
               className=" fixed z-10 shadow-2xl bottom-16 rounded-t-2xl overflow-hidden right-6 w-[90%] min-h-[35rem] bg-white">
                 <div className="flex gap-2 items-center justify-between px-6 bg-primary text-white py-2">
                     <div className=" text-white cursor-pointer" style={{color:'white'}}>
-                        <img ref={navOpen} src="/images/menu-open.png" alt="icon" className="hidden" height={20} width={20} />
+                        <img ref={navOpen} onClick={openChats} src="/images/menu-open.png" alt="icon" className="hidden" height={20} width={20} />
                     </div>
                     <div className="flex items-center gap-3">
                     <img className="rounded-full bg-white p-1" src="/images/agentIcon.png" alt="agentIcon" width={35} height={35} />
@@ -54,8 +60,8 @@ const Chat = () => {
                     </div>
                          <div className=""><Notifications/></div>
                 </div>
-                    <div className="flex pt-4 gap-4 relative overflow-hidden ">
-                        <div ref={chatRef} className="relative leftChat">
+                    <div className="flex pt-4 gap-4 relative ">
+                       { showChatUsers && <div ref={chatRef} className="relative leftChat">
                             <div onClick={closeChats} className="absolute closeIcon hidden cursor-pointer -top-2 right-4"><img src="/images/menu-close.png" alt="icon" height={17} width={17} /></div>
                             <PotentialChats/>
                             {userChats?.length < 1 ? null : (
@@ -77,7 +83,7 @@ const Chat = () => {
                                     })}
                                 </div>
                             )}
-                        </div>
+                        </div>}
                         <div className="grow pr-4">
                             <ChatBox/>
                         </div>
