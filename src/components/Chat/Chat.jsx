@@ -39,16 +39,18 @@ const Chat = () => {
               className=" fixed z-10 shadow-2xl bottom-16 rounded-t-2xl overflow-hidden right-6 w-[90%] min-h-[35rem] bg-white">
                 <div className="flex gap-2 items-center justify-between px-6 bg-primary text-white py-2">
                     <motion.div className="overflow-hidden" initial={{scale:0.9}} animate={{scale:1}} transition={{type:'spring',stiffness:130}}></motion.div>
+                    <div>
+                        <img src="/images/menu-open.png" alt="icon" height={17} width={17} />
+                    </div>
                     <div className="flex items-center gap-3">
                     <img className="rounded-full bg-white p-1" src="/images/agentIcon.png" alt="agentIcon" width={35} height={35} />
                     <span className="text-lg font-bold">AirBnb Chat</span>
                     </div>
-
                          <div className=""><Notifications/></div>
                 </div>
                     <div className="flex pt-4 gap-4 relative ">
                         <div className="relative leftChat">
-                            <div className="absolute -top-2 right-4"><img src="/images/menu-close.png" alt="icon" height={17} width={17} /></div>
+                            <div className="absolute cursor-pointer -top-2 right-4"><img src="/images/menu-close.png" alt="icon" height={17} width={17} /></div>
                             <PotentialChats/>
                             {userChats?.length < 1 ? null : (
                                 <div className="flex flex-col">
