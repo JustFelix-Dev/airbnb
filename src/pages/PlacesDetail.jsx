@@ -82,7 +82,7 @@ console.log("Weather:",weather)
                     <div className='flex flex-col sm:flex-row  items-center sm:justify-between gap-4'>
                      <div className='border-b'>
                       {
-                        weather && weather?.weather ? (
+                        weather && weather.weather ? (
                           <>
                         <div className='flex gap-6 border-b pb-4'>
                           <div>
