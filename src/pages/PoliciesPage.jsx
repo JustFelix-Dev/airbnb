@@ -1,7 +1,7 @@
 const PoliciesPage = () => {
     return ( 
            <>
-              <div className=" flex justify-center gap-4 mt-4 border border-primary rounded-xl p-8 w-[80%]  mx-auto shadow-2xl">
+              <div className=" flex policies justify-center gap-4 mt-4 border border-primary rounded-xl p-8 w-[80%]  mx-auto shadow-2xl">
                   <div className="flex-[40%] max-w-[60ch]">
                      <div>
                         <h1 className="text-2xl font-bold">Badges:</h1>
