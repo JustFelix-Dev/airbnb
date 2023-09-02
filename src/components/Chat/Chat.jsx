@@ -38,7 +38,7 @@ const Chat = () => {
               animate={{y:0}} transition={{type:'spring',stiffness:170}} 
               className=" fixed z-10 shadow-2xl bottom-16 rounded-t-2xl overflow-hidden right-6 w-[90%] min-h-[35rem] bg-white">
                 <div className="flex gap-2 items-center justify-between px-6 bg-primary text-white py-2">
-                    <div className="text-white cursor-pointer" style={{color:'white'}}>
+                    <div className="hidden text-white cursor-pointer" style={{color:'white'}}>
                         <img src="/images/menu-open.png" alt="icon" style={{color:"white"}} height={20} width={20} />
                     </div>
                     <div className="flex items-center gap-3">
@@ -49,7 +49,7 @@ const Chat = () => {
                 </div>
                     <div className="flex pt-4 gap-4 relative ">
                         <div className="relative leftChat">
-                            <div className="absolute cursor-pointer -top-2 right-4"><img src="/images/menu-close.png" alt="icon" height={17} width={17} /></div>
+                            <div className="absolute hidden cursor-pointer -top-2 right-4"><img src="/images/menu-close.png" alt="icon" height={17} width={17} /></div>
                             <PotentialChats/>
                             {userChats?.length < 1 ? null : (
                                 <div className="flex flex-col">

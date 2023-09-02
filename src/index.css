@@ -231,6 +231,9 @@ button.primary{
       height:470px;
       background-color: white;
     }
+    .closeIcon{
+      display: block;
+    } 
   }
   @media screen and (max-width:850px){
     .policies{
