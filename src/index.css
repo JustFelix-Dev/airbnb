@@ -228,6 +228,7 @@ button.primary{
   @media screen and (max-width:900px){
     .leftChat{
       position: fixed;
+      bottom: 0;
       background-color: white;
     }
   }
