@@ -70,7 +70,7 @@ const Chat = () => {
                                 </div>
                             )}
                         </div>
-                        <div className="grow pr-4 bg-green-600">
+                        <div className="grow pr-4">
                             <ChatBox/>
                         </div>
                     </div>
