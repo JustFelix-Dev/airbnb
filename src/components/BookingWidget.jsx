@@ -11,6 +11,7 @@ const BookingWidget = ({place}) => {
     const [ fullName,setFullName] = useState('');
     const [ mobile,setMobile ] = useState('');
     const {user} = useContext(userContext);
+    const [ isLoading,setIsLoading] = useState(false);
     const navigate = useNavigate();
 
     useEffect(()=>{
@@ -25,9 +26,15 @@ const BookingWidget = ({place}) => {
     }
 
     const handleBooking=async()=>{
-        const formBody = { place:place._id,checkIn,checkOut,numOfGuests:guestNum,fullName,mobile,price:numOfNight * place.price}
+             setIsLoading(true)
+        const formBody = {
+              place:place._id,checkIn,checkOut,
+              numOfGuests:guestNum,fullName,mobile,
+              price:numOfNight * place.price
+        }
         const response = await axios.post('/bookings',formBody)
         const bookingId = response.data._id;
+        setIsLoading(false)
         navigate(`/account/bookings/${bookingId}`)
     }
 
