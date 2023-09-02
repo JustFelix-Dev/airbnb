@@ -31,7 +31,7 @@ const BookingPlace = () => {
   return (
          <>
           <AnimatePresence>
-          { isLoading && (
+          { !isLoading && (
            <motion.div exit={{opacity:0}}  className='h-[80vh] w-full flex items-center justify-center bg-white'>
                    <div className="newtons-cradle index">
                   <div className="newtons-cradle__dot"></div>
