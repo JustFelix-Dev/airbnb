@@ -55,26 +55,26 @@ const OrderStatus = () => {
                           <span className="flex my-1 py-1 w-44 mx-auto rounded-xl bg-green-500 text-white font-semibold items-center justify-center">Status:<span>{order.status}</span></span>
                               <h1 className=" text-center sm:text-start text-xl pb-2 text-gray-900">Customer :</h1>
                               <div className="text-base flex flex-col text-gray-700 border-b-2 pb-2 ">
-                              <span className="flex flex-col sm:flex-row justify-between">Full-Name: <span>{order.details[0].fullName}</span> </span>
-                              <span className="flex flex-col sm:flex-row justify-between">Country: <span>{order.country}</span></span>
-                              <span className="flex flex-col sm:flex-row justify-between">Phone-Number: <span>{order.details[0].mobile}</span></span>
-                              <span className="flex flex-col sm:flex-row justify-between">Email: <span>{order.email}</span></span>
+                              <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between ">Full-Name: <span>{order.details[0].fullName}</span> </span>
+                              <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between">Country: <span>{order.country}</span></span>
+                              <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between">Phone-Number: <span>{order.details[0].mobile}</span></span>
+                              <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between">Email: <span>{order.email}</span></span>
                               </div>
                               <h1 className="text-center sm:text-start text-xl pb-2 pt-2 text-gray-900">Payments:</h1>
                           <div className=" text-base flex flex-col text-gray-700 border-b-2 pb-2 ">
-                          <span className="flex flex-col sm:flex-row justify-between">Payment-Intent: <span>{order.paymentIntentId}</span></span>
-                          <span className="flex flex-col sm:flex-row justify-between">Payment-Status: <span>{order.payment_status}</span></span>
-                          <span className="flex flex-col sm:flex-row justify-between">Amount Paid: <span>${order.details[0].price}</span></span>
-                          <span className="flex flex-col sm:flex-row justify-between">Payment-Time: <span>{format(new Date(order.paymentTime *1000),'dd MMMM, yyyy HH:mm:ss a')}</span></span>
+                          <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between">Payment-Intent: <span>{order.paymentIntentId}</span></span>
+                          <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between">Payment-Status: <span>{order.payment_status}</span></span>
+                          <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between">Amount Paid: <span>${order.details[0].price}</span></span>
+                          <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between">Payment-Time: <span>{format(new Date(order.paymentTime *1000),'dd MMMM, yyyy HH:mm:ss a')}</span></span>
                           </div>
                             <h1 className=" text-center sm:text-start text-xl pb-2 pt-2 text-gray-900">Bookings:</h1>
                             <div className=" flex flex-col text-gray-700 ">
-                          <span className="flex flex-col sm:flex-row justify-between">Booking Number:<span>{order.customerId}</span></span> 
-                          <span className="flex flex-col sm:flex-row justify-between">Booking Location: <span className="w-[200px] truncate sm:w-auto">{order.bookingPlace}</span> </span>
-                          <span className="flex flex-col sm:flex-row justify-between">Booking Address:<span>{order.bookingAddress}</span></span> 
-                          <span className="flex flex-col sm:flex-row justify-between">Guests: <span>{order.details[0].numOfGuests}</span></span>
-                          <span className="flex flex-col sm:flex-row justify-between">Check-In Time: <span>{ format(new Date(order.details[0].checkIn),'dd EEEE MMMM, yyyy')}</span></span>
-                          <span className="flex flex-col sm:flex-row justify-between">Check-Out Time: <span>{ format(new Date(order.details[0].checkOut),'dd EEEE MMMM, yyyy')}</span></span>
+                          <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between">Booking Number:<span>{order.customerId}</span></span> 
+                          <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between">Booking Location: <span>{order.bookingPlace}</span> </span>
+                          <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between">Booking Address:<span>{order.bookingAddress}</span></span> 
+                          <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between">Guests: <span>{order.details[0].numOfGuests}</span></span>
+                          <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between">Check-In Time: <span>{ format(new Date(order.details[0].checkIn),'dd EEEE MMMM, yyyy')}</span></span>
+                          <span className="flex flex-col underline sm:no-underline sm:flex-row justify-between">Check-Out Time: <span>{ format(new Date(order.details[0].checkOut),'dd EEEE MMMM, yyyy')}</span></span>
                             </div>
                          
                           <div className="flex my-2 justify-center">
