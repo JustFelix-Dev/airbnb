@@ -83,7 +83,8 @@ const Chat = () => {
                                     })}
                                 </div>
                             )}
-                        </div>}
+                        </div>
+                        }
                         <div className="grow pr-4">
                             <ChatBox/>
                         </div>
