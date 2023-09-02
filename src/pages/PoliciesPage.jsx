@@ -9,7 +9,7 @@ const PoliciesPage = () => {
                             <div className="flex items-center gap-2">
                             <h1 className="underline text-lg">Bronze Badge:</h1> <span><img src="/images/bronze-badge.png" alt="" height={30} width={30} /></span>
                             </div>
-                             <ul className="list-disc list-inside ">
+                             <ul className="text-sm sm:text-base list-disc list-inside ">
                                  <li>User must have between 0 - 500 points. <span className="text-gray-500">(default)</span></li>
                                  <li>Users with the bronze badge do not get discounts on reservations.</li>
                              </ul>
@@ -27,7 +27,7 @@ const PoliciesPage = () => {
                             <div className="flex items-center gap-2">
                             <h1 className="underline text-lg">Gold Badge:</h1> <span><img src="/images/gold-badge.png" alt="" height={30} width={30} /></span>
                             </div>
-                             <ul className="list-disc list-inside">
+                             <ul className="text-sm sm:text-base list-disc list-inside">
                                  <li>User must have between 1000 - 1500 points.</li>
                                  <li>Users with the Gold badge get up to 4% discount on all reservations made.</li>
                              </ul>
@@ -36,7 +36,7 @@ const PoliciesPage = () => {
                             <div className="flex items-center gap-2">
                             <h1 className="underline text-lg">Platinum Badge:</h1> <span><img src="/images/platinum-badge.png" alt="" height={30} width={30}/></span>
                             </div>
-                             <ul className="list-disc list-inside">
+                             <ul className="text-sm sm:text-base list-disc list-inside">
                                  <li>User must have between 1500 - 2000 points.</li>
                                  <li>Users with the Platinum badge get up to 6% discount on all reservations made.</li>
                              </ul>
