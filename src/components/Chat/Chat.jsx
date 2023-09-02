@@ -45,9 +45,9 @@ const Chat = () => {
                     </div>
                          <div className=""><Notifications/></div>
                 </div>
-                    <div className="flex pt-4 gap-4 bg-green-500">
-                        <div className="relative">
-                            <div className="absolute -top-1 right-4"><img src="/images/menu-close.png" alt="icon" height={20} width={20} /></div>
+                    <div className="flex pt-4 gap-4 ">
+                        <div className="relative bg-green-500">
+                            <div className="absolute -top-1 right-4"><img src="/images/menu-close.png" alt="icon" height={17} width={17} /></div>
                             <PotentialChats/>
                             {userChats?.length < 1 ? null : (
                                 <div className="flex flex-col">
