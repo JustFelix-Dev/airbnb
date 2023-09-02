@@ -46,7 +46,7 @@ const Chat = () => {
 
                          <div className=""><Notifications/></div>
                 </div>
-                    <div className="flex pt-4 gap-4 ">
+                    <div className="flex pt-4 gap-4 relative ">
                         <div className="relative leftChat">
                             <div className="absolute -top-2 right-4"><img src="/images/menu-close.png" alt="icon" height={17} width={17} /></div>
                             <PotentialChats/>
@@ -70,7 +70,7 @@ const Chat = () => {
                                 </div>
                             )}
                         </div>
-                        <div className="grow pr-4">
+                        <div className="grow pr-4 bg-green-600">
                             <ChatBox/>
                         </div>
                     </div>
