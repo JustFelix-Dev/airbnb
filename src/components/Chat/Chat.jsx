@@ -54,7 +54,7 @@ const Chat = () => {
                     </div>
                          <div className=""><Notifications/></div>
                 </div>
-                    <div className="flex pt-4 gap-4 relative ">
+                    <div className="flex pt-4 gap-4 relative overflow-hidden ">
                         <div ref={chatRef} className="relative leftChat">
                             <div onClick={closeChats} className="absolute closeIcon hidden cursor-pointer -top-2 right-4"><img src="/images/menu-close.png" alt="icon" height={17} width={17} /></div>
                             <PotentialChats/>
