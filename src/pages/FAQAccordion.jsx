@@ -34,7 +34,7 @@ const FAQAccordion = () => {
           <div className="mt-2">{faq.answer}</div>
         </div>
       ))}
-      <div className="flex flex-wrap justify-center mt-4">
+      <div className="flex flex-wrap gap-2 justify-center mt-4">
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index}
