@@ -43,6 +43,7 @@ const Chat = () => {
                     <img className="rounded-full bg-white p-1" src="/images/agentIcon.png" alt="agentIcon" width={35} height={35} />
                     <span className="text-lg font-bold">AirBnb Chat</span>
                     </div>
+                    
                          <div className=""><Notifications/></div>
                 </div>
                     <div className="flex pt-4 gap-4 ">
