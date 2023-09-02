@@ -70,7 +70,7 @@ const OrderStatus = () => {
                             <h1 className="text-xl pb-2 pt-2 text-gray-900">Bookings:</h1>
                             <div className="flex flex-col text-gray-700 ">
                           <span className="flex justify-between">Booking Number:<span>{order.customerId}</span></span> 
-                          <span className="flex justify-between">Booking Location: <span>{order.bookingPlace}</span> </span>
+                          <span className="flex justify-between">Booking Location: <span className="w-[200px] truncate sm:w-0">{order.bookingPlace}</span> </span>
                           <span className="flex justify-between">Booking Address:<span>{order.bookingAddress}</span></span> 
                           <span className="flex justify-between">Guests: <span>{order.details[0].numOfGuests}</span></span>
                           <span className="flex justify-between">Check-In Time: <span>{ format(new Date(order.details[0].checkIn),'dd EEEE MMMM, yyyy')}</span></span>
