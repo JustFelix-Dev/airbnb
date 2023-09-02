@@ -47,7 +47,7 @@ const Chat = () => {
                 </div>
                     <div className="flex pt-4 gap-4 ">
                         <div className="relative">
-                            <div className="absolute right-4">X</div>
+                            <div className="absolute top-0 right-4"><img src="/images/menu-close.png" alt="icon" height={10} width={10} /></div>
                             <PotentialChats/>
                             {userChats?.length < 1 ? null : (
                                 <div className="flex flex-col">
