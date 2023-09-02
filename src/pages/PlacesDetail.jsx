@@ -57,7 +57,7 @@ console.log("Weather:",weather)
        </motion.div>
          ) }
          </AnimatePresence> 
-         { !isLoading && place && 
+         {  place && 
             (<div className='mt-4 max-w-5xl shadow-lg  mx-auto px-2 sm:px-8 pt-8'>
                 <h1 className=' mb-4 text-lg sm:text-xl md:text-3xl md:mb-0'>{place.title}</h1>
                    <AddressLink>{place.address}</AddressLink>
