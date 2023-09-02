@@ -35,7 +35,7 @@ const OrderStatus = () => {
                 </div>
                 <AnimatePresence>
                     { isLoading && (
-                    <motion.div exit={{opacity:0}} transition={{duration:3}} className='h-[40vh] w-full flex items-center justify-center bg-white'>
+                    <motion.div exit={{opacity:0}} className='h-[10vh] w-full flex flex-col items-center justify-center bg-white'>
                             <div className="newtons-cradle index">
                             <div className="newtons-cradle__dot"></div>
                             <div className="newtons-cradle__dot"></div>
