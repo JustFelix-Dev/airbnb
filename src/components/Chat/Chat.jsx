@@ -46,7 +46,8 @@ const Chat = () => {
                          <div className=""><Notifications/></div>
                 </div>
                     <div className="flex pt-4 gap-4 ">
-                        <div>
+                        <div className="relative">
+                            <div className="absolute right-4">X</div>
                             <PotentialChats/>
                             {userChats?.length < 1 ? null : (
                                 <div className="flex flex-col">
