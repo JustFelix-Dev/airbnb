@@ -12,6 +12,9 @@ const ResetPassword = () => {
     const handleSubmit=(e)=>{
         setIsLoading(true)
         e.preventDefault();
+        if(!email){
+            return toast.error("Enter a valid email!")
+        }
        axios.post('/forgotPassword',{email})
        .then((res)=>{
           toast.success(`${res.data}`)
