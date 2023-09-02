@@ -61,7 +61,8 @@ const Chat = () => {
                          <div className=""><Notifications/></div>
                 </div>
                     <div className="flex pt-4 gap-4 relative ">
-                       { showChatUsers && <div ref={chatRef} className="relative leftChat">
+                        <AnimatePresence>
+                       { showChatUsers && <motion.div exit={{opacity:0,scale:0.9}} initial={{opacity:0,scale:0.9}} animate={{opacity:1,scale:1}} className="relative leftChat">
                             <div onClick={closeChats} className="absolute closeIcon hidden cursor-pointer -top-2 right-4"><img src="/images/menu-close.png" alt="icon" height={17} width={17} /></div>
                             <PotentialChats/>
                             {userChats?.length < 1 ? null : (
@@ -83,8 +84,9 @@ const Chat = () => {
                                     })}
                                 </div>
                             )}
-                        </div>
+                        </motion.div>
                         }
+                        </AnimatePresence>
                         <div className="grow pr-4">
                             <ChatBox/>
                         </div>
