@@ -18,7 +18,7 @@ const OrderStatus = () => {
             console.log(err.message)
         })
         setIsLoading(false)
-    },[id])
+    },[id,order])
 
      const handlePrint=()=>{
         window.print()
@@ -28,10 +28,10 @@ const OrderStatus = () => {
            <>
              <div className=" orderReceipt w-[80%] relative shadow-2xl mx-auto px-8">
                 <div>
-                <span className="flex justify-center p-4"><svg className=" w-[45px] h-[45px] sm:w-[80px] sm:h-[80px]" fill="none" stroke="#FF385C" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <span className="flex justify-center p-4"><svg className="w-[80px] h-[80px]" fill="none" stroke="#FF385C" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path  stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg></span>
-                <h1 className="py-2 border-b-2 text-center text-lg sm:text-xl border-primary">Reservation Details</h1>
+                <h1 className="py-2 border-b-2 text-center text-xl border-primary">Reservation Details</h1>
                 </div>
                 <AnimatePresence>
                     { isLoading && (
@@ -53,12 +53,12 @@ const OrderStatus = () => {
                               <img className="absolute opacity-10 max-w-[100%] -z-10 top-[42%] left-[42%] sm:top-[37%] sm:left-[37%] h-[130px] w-[130px] sm:h-[300px] sm:w-[300px]" src="/images/airbnb.png" alt="airbnb-logo" />
 
                           <span className="flex my-1 py-1 w-44 mx-auto rounded-xl bg-green-500 text-white font-semibold items-center justify-center">Status:<span>{order.status}</span></span>
-                              <h1 className=" text-lg sm:text-xl pb-2 text-gray-900">Customer :</h1>
-                              <div className=" text-sm sm:text-base flex flex-col text-gray-700 border-b-2 pb-2 ">
-                              <span className="flex justify-between">Full-Name: <span>{order.details[0].fullName}</span> </span>
-                              <span className="flex justify-between">Country: <span>{order.country}</span></span>
-                              <span className="flex justify-between">Phone-Number: <span>{order.details[0].mobile}</span></span>
-                              <span className="flex justify-between">Email: <span>{order.email}</span></span>
+                              <h1 className=" text-center sm:text-start text-xl pb-2 text-gray-900">Customer :</h1>
+                              <div className="text-base flex flex-col text-gray-700 border-b-2 pb-2 ">
+                              <span className="flex flex-col sm:flex-row justify-between">Full-Name: <span>{order.details[0].fullName}</span> </span>
+                              <span className="flex flex-col sm:flex-row justify-between">Country: <span>{order.country}</span></span>
+                              <span className="flex flex-col sm:flex-row justify-between">Phone-Number: <span>{order.details[0].mobile}</span></span>
+                              <span className="flex flex-col sm:flex-row justify-between">Email: <span>{order.email}</span></span>
                               </div>
                               <h1 className="text-lg sm:text-xl pb-2 pt-2 text-gray-900">Payments:</h1>
                           <div className=" text-sm sm:text-base flex flex-col text-gray-700 border-b-2 pb-2 ">
