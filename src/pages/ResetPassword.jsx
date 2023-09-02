@@ -12,6 +12,7 @@ const ResetPassword = () => {
     const handleSubmit=(e)=>{
         setIsLoading(true)
         e.preventDefault();
+        
         if(!email){
             setIsLoading(false)
             return toast.error("Enter a valid email!")
