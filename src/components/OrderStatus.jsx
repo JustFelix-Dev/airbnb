@@ -8,6 +8,7 @@ const OrderStatus = () => {
     const {id} = useParams();
     const navigate = useNavigate();
     const [ order,setOrder] = useState(null);
+    const [ isLoading,setIsLoading] = useState(true);
   
     useEffect(()=>{
         axios.get(`/getOrder/${id}`).then((response)=>{
@@ -16,6 +17,7 @@ const OrderStatus = () => {
         }).catch((err)=>{
             console.log(err.message)
         })
+        setIsLoading(false)
     },[id])
 
      const handlePrint=()=>{
@@ -31,8 +33,21 @@ const OrderStatus = () => {
                 </svg></span>
                 <h1 className="py-2 border-b-2 text-center text-xl border-primary">Reservation Details</h1>
                 </div>
+                <AnimatePresence>
+                    { isLoading && (
+                    <motion.div exit={{opacity:0}} transition={{duration:3}} className='h-[40vh] w-full flex items-center justify-center bg-white'>
+                            <div className="newtons-cradle index">
+                            <div className="newtons-cradle__dot"></div>
+                            <div className="newtons-cradle__dot"></div>
+                            <div className="newtons-cradle__dot"></div>
+                            <div className="newtons-cradle__dot"></div>
+                            </div>
+                            <div className="text-primary font-medium text-xs">Kindly refresh page if order info is not retrieved.</div>
+                </motion.div>
+                    ) }
+                    </AnimatePresence> 
                     {
-                        order && (
+                      !isLoading && order && (
                               <>
                               <div className="">
                               <img className="absolute opacity-10 max-w-[100%] -z-10 top-[30%] left-[30%]" height={200} width={200} src="/images/airbnb.png" alt="airbnb-logo" />
