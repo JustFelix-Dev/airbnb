@@ -224,6 +224,13 @@ button.primary{
     white-space: nowrap;
   }
 
+  @media screen and (max-width:550px){
+    .orderReceipt{
+      html{
+        font-size: 12px;
+      }
+    }
+  }
   @media screen and (max-width:520px){
     .bookingpayment{
       flex-direction: column;
