@@ -50,7 +50,7 @@ const OrderStatus = () => {
                       !isLoading && order && (
                               <>
                               <div className="">
-                              <img className="absolute opacity-10 max-w-[100%] -z-10 top-[30%] left-[30%]" height={200} width={200} src="/images/airbnb.png" alt="airbnb-logo" />
+                              <img className="absolute opacity-10 max-w-[100%] -z-10 top-[40%] left-[40%]" height={300} width={300} src="/images/airbnb.png" alt="airbnb-logo" />
 
                           <span className="flex my-1 py-1 w-44 mx-auto rounded-xl bg-green-500 text-white font-semibold items-center justify-center">Status:<span>{order.status}</span></span>
                               <h1 className="text-xl pb-2 text-gray-900">Customer :</h1>
