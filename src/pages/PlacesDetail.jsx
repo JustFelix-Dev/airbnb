@@ -22,7 +22,7 @@ useEffect(()=>{
            const {data} = response;
            console.log(data)
            setPlace(data)
-           setIsLoading(false)
+          //  setIsLoading(false)
       }) 
 },[id])
 
