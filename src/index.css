@@ -258,6 +258,12 @@ button.primary{
     
     }
     }
+
+    @media screen and (max-width:480px){
+       .chatmessage{
+        font-size: 0.6rem;
+       }
+    }
     @media screen and (max-width:460px){
       .indexLocations{
         grid-template-columns: 1fr;
