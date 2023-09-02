@@ -13,6 +13,7 @@ const ResetPassword = () => {
         setIsLoading(true)
         e.preventDefault();
         if(!email){
+            setIsLoading(false)
             return toast.error("Enter a valid email!")
         }
        axios.post('/forgotPassword',{email})
