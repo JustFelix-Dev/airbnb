@@ -66,7 +66,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
 
             {  user && 
             <div className='w-full sm:w-[80%] p-4 shadow-2xl rounded-lg mx-auto'>
-  <div className="flex flex-col profilepage  sm:flex-row gap-10 p-4 border border-dashed border-primary rounded-xl">
+  <div className="flex profilepage gap-10 p-4 border border-dashed border-primary rounded-xl">
     <div className='sm:border-r border-primary '>
       <div className='flex justify-center p-4'>
         <img 
