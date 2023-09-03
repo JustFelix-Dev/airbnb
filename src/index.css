@@ -235,6 +235,9 @@ button.primary{
     .closeIcon{
       display: block;
     } 
+    .profilepage{
+      flex-direction: column;
+    }
   }
   @media screen and (max-width:850px){
     .policies{

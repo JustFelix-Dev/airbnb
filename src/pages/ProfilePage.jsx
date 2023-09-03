@@ -66,7 +66,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
 
             {  user && 
             <div className='w-full sm:w-[80%] p-4 shadow-2xl rounded-lg mx-auto'>
-  <div className="flex flex-col sm:flex-row gap-10 p-4 border border-dashed border-primary rounded-xl">
+  <div className="flex flex-col profilepage  sm:flex-row gap-10 p-4 border border-dashed border-primary rounded-xl">
     <div className='sm:border-r border-primary '>
       <div className='flex justify-center p-4'>
         <img 
@@ -103,7 +103,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
         </div>
       )}
     </div>
-    <div className=' grow border border sm:pl-4'>
+    <div className=' grow sm:pl-4'>
       <h1 className='text-2xl font-bold'>Welcome back, <span className='text-primary'>{user.name}!</span></h1>
       <div className='flex mt-4 items-center justify-between'>
         <div className='flex flex-col gap-6'>
