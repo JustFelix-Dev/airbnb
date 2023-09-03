@@ -67,7 +67,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
             {  user && 
             <div className='w-full sm:w-[80%] p-4 shadow-2xl rounded-lg mx-auto'>
   <div className="flex profilepage gap-10 p-4 border border-dashed border-primary rounded-xl">
-    <div className='sm:border-r border-primary '>
+    <div className=' basicInfo sm:border-r border-primary '>
       <div className='flex justify-center p-4'>
         <img 
           src={user && user.photo ? user.photo : 'images/svgexport-7.svg'}
@@ -138,7 +138,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
           )}
           {!isLoading && fetchOrders && fetchOrders.length > 0 &&
             fetchOrders.sort((a,b)=>new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()).map((order,idx)=>(
-              <div key={idx} className='flex my-2 gap-2 p-2 border border-primary rounded-lg'>
+              <div key={idx} className='flex my-2 fetchedorders gap-2 p-2 border border-primary rounded-lg'>
                 <div className='flex '>
                   <img className='object-cover' src={order.orderPhoto} alt="orderImage" width={70} height={30} />
                 </div>

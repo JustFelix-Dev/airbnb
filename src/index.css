@@ -24,7 +24,7 @@
     overflow: hidden;
     background-color: whitesmoke;
     border: 1px solid #f0516e;
-    width: 200%;
+    width: 170%;
     height: 20px;
     border-radius: 6px;
 }
@@ -238,6 +238,10 @@ button.primary{
     .profilepage{
       flex-direction: column;
     }
+    .basicinfo{
+      border-right: none;
+      border-bottom: 2px solid #FF385C;
+    }
   }
   @media screen and (max-width:850px){
     .policies{
@@ -271,6 +275,9 @@ button.primary{
     @media screen and (max-width:460px){
       .indexLocations{
         grid-template-columns: 1fr;
+      }
+      .fetchedorders{
+        font-size: 0.8rem;
       }
     
     }
