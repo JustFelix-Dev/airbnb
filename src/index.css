@@ -246,7 +246,11 @@ button.primary{
     }
     .basicinfo{
       border-right: none;
+    }
+    .displayInfo{
+      order: 0;
       border-bottom: 1px solid #FF385C;
+
     }
   }
   @media screen and (max-width:850px){

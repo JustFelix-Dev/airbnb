@@ -103,7 +103,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
         </div>
       )}
     </div>
-    <div className=' grow sm:pl-4'>
+    <div className=' displayInfo grow sm:pl-4'>
       <h1 className='text-2xl font-bold'>Welcome back, <span className='text-primary'>{user.name}!</span></h1>
       <div className='flex mt-4 items-center justify-between'>
         <div className='flex flex-col gap-6'>
