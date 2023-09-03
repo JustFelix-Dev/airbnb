@@ -162,7 +162,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
 
             //     </div>
             //  </div>
-            <div className='w-full sm:w-[80%] p-4 bg-primary shadow-2xl rounded-lg mx-auto'>
+            <div className='w-full sm:w-[80%] p-4 shadow-2xl rounded-lg mx-auto'>
   <div className="flex flex-col sm:flex-row gap-10 p-4 border border-dashed border-primary rounded-xl">
     <div className='border-b sm:border-r border-primary sm:pr-20'>
       <div className='flex justify-center p-4'>
