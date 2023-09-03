@@ -64,9 +64,9 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
     return ( 
              <>
 
-            {  user &&  <div className=' w-[75%]  p-4 overflow-hidden
-               shadow-2xl rounded-lg mx-auto' >
-                <div className=" flex gap-10 p-4 border border-dashed border-primary overflow-hidden rounded-xl ">
+            {  user && 
+             <div className='w-[80%]  p-4  shadow-2xl rounded-lg mx-auto' >
+                <div className=" flex gap-10 p-4 border border-dashed border-primary rounded-xl ">
               <div className='border-r border-primary pr-20' >
                   <div className='flex justify-center p-4'>
                   <img 
@@ -161,7 +161,8 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                 </div>
 
                 </div>
-             </div>}
+             </div>
+             }
              </>
      );
 }
