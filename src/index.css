@@ -227,7 +227,7 @@ button.primary{
 
   @media screen and (min-width:901px){
       .basicInfo{
-      border-right: 2px solid #FF385C;
+      border-right: 1px solid #FF385C;
       }
   }
  
@@ -246,7 +246,7 @@ button.primary{
     }
     .basicinfo{
       border-right: none;
-      border-bottom: 2px solid #FF385C;
+      border-bottom: 1px solid #FF385C;
     }
   }
   @media screen and (max-width:850px){
