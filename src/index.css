@@ -248,9 +248,8 @@ button.primary{
       border-right: none;
     }
     .displayInfo{
-      order: 0;
+      order: -1;
       border-bottom: 1px solid #FF385C;
-
     }
   }
   @media screen and (max-width:850px){
