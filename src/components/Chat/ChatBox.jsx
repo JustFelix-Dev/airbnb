@@ -49,7 +49,7 @@ const ChatBox = () => {
                     ))}
                 </div>
          </div>
-                <div className=' flex bg-slate-50 w-[100%]' >
+                <div className=' flex items-center bg-slate-50 w-[100%]' >
                 <InputEmoji value={textMessage} onChange={setTextMessage} fontFamily="Mukta" borderColor="#FF5A5F" />
                  <button onClick={()=>sendTextMessage(textMessage,user,currentChat._id,setTextMessage)} className='bg-primary border-0 outline-0 p-4 rounded-full'><BsSend size={20} color='white' /></button>
                 </div>
