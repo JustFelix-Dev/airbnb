@@ -67,7 +67,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
             {  user && 
             <div className='w-full sm:w-[80%] p-4 shadow-2xl rounded-lg mx-auto'>
   <div className="flex flex-col sm:flex-row gap-10 p-4 border border-dashed border-primary rounded-xl">
-    <div className='sm:border-r border-primary sm:pr-20'>
+    <div className='sm:border-r border-primary '>
       <div className='flex justify-center p-4'>
         <img 
           src={user && user.photo ? user.photo : 'images/svgexport-7.svg'}
@@ -143,7 +143,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
                   <img className='object-cover' src={order.orderPhoto} alt="orderImage" width={70} height={30} />
                 </div>
                 <div className='grow'>
-                  <p className='border w-[100px] truncate'>{order.bookingPlace}</p>
+                  <p className='border w-[200px] truncate'>{order.bookingPlace}</p>
                   <div className='flex justify-between'>
                     <span>Status: <span className='bg-green-800 px-4 text-sm text-white rounded-md'>{order.payment_status}</span></span>
                     <span>Date: {format(new Date(order.paymentTime * 1000),"dd MMM. ''yy")}</span>
