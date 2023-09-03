@@ -250,6 +250,7 @@ button.primary{
     .displayInfo{
       order: -1;
       border-bottom: 1px solid #FF385C;
+      background-color: #f0516e;
     }
   }
   @media screen and (max-width:850px){
