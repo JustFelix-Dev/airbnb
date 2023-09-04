@@ -280,6 +280,13 @@ button.primary{
       flex-direction: column;
     }
   }
+  @media screen and (max-width:602px){
+     .placetitle{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+     }
+  }
 
   @media screen and (max-width:600px){
     .profilenav{
