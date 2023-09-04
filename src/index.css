@@ -296,7 +296,8 @@ button.primary{
       position: static;
      }
      .paidStatus{
-      top: 0;
+      top: 2;
+      left: 2;
      }
   }
 
