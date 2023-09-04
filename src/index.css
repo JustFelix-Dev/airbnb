@@ -269,6 +269,7 @@ button.primary{
     }
     .placeImage{
       align-self: center;
+      padding-bottom: 0;
     }
     .placeDetails{
       padding-left: 1rem;
