@@ -262,7 +262,7 @@ button.primary{
   @media screen and (max-width:600px){
     .profilenav{
       flex-direction: column;
-      padding-inline: 40%;
+      padding-inline: 5%;
     }
   }
   @media screen and (max-width:520px){
