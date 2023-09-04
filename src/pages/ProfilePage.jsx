@@ -117,8 +117,8 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
         {typing ? (
           <TypeAnimation
             text={user.name}
-            typingDelay={50} // Adjust typing speed as needed
-            cursor={false} // Hide cursor
+            typingDelay={50} 
+            cursor={false} 
           />
         ) : (
           user.name
