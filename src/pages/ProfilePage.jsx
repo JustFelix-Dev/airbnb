@@ -14,7 +14,6 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
     const [ badgeName,setBadgeName] = useState('');
     const [ maxValue,setMaxValue] = useState('');
     const [ badgeUrl,setBadgeUrl] = useState('');
-    const [typing, setTyping] = useState(true);
     const date = new Date()
     const day = date.getDay()
     const dayList = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -27,12 +26,6 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
          }).catch((err)=>{
           console.log(err.message)
          })
-
-         useEffect(() => {
-          setTimeout(() => {
-            setTyping(false);
-          }, 1000); // Adjust the delay as needed
-        }, []);
 
       if(user.rewardPoint <= 499){
           setBadgeName('Bronze')
@@ -112,17 +105,17 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
     </div>
     <div className='border-primary  displayInfo grow sm:pl-4'>
     <h1 className='text-xl sm:text-2xl font-bold'>
-      Welcome back,{' '}
+      Welcome back,
       <span className='text-primary'>
-        {typing ? (
+         (
           <TypeAnimation
             text={user.name}
             typingDelay={50} 
             cursor={false} 
           />
         ) : (
-          user.name
-        )}
+          {user.name}
+        )
         !
       </span>
     </h1>
