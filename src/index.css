@@ -293,8 +293,7 @@ button.primary{
       display: none;
      }
      .paidStatus{
-      right:0;
-      left: 2;
+      top: 0;
      }
   }
 
