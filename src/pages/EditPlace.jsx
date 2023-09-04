@@ -118,8 +118,7 @@ const EditPlace = () => {
                              placeholder='Add using a link'/>
                             <button onClick={addPhotoByLink} className='bg-primary text-white rounded-md px-2'>Add&nbsp;Photo</button>
                         </div>
-
-                        <div className="mt-2 grid gap-2 grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                        <div className="mt-2 grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
                             {
                               photos.length > 0 && photos.map((link,idx)=>(
                                 <div className='h-32  relative flex' key={idx}>
