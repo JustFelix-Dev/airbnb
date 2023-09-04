@@ -14,19 +14,19 @@ const BookingDate = ({ booking }) => {
   return (
     <>
       <div className='relative'>
-        <div className='flex gap-2 border-t border-gray-300 mt-2 py-2'>
+        <div className='flex gap-2 border-t dateParent border-gray-300 mt-2 py-2'>
           <div className='flex items-center formatCheckIn'>
-            <FcCalendar /> {formattedCheckInDate} &rarr;
+            <FcCalendar /> {formattedCheckInDate} <span className='diatrics'> &rarr;</span>
           </div>
           <div className='flex items-center formatCheckOut'>
             <FcCalendar /> {formattedCheckOutDate}
           </div>
         </div>
-        <div className=' flex justify-center gap-2 text-lg bg-white text-primary font-medium max-w-xs text-center py-1 rounded-lg'>
+        <div className=' flex  justify-center gap-2 text-lg bg-white text-primary font-medium max-w-xs text-center py-1 rounded-lg'>
          <p className=' flex days items-center justify-center gap-2'><MdModeNight/><p>{differenceInCalendarDays(new Date(booking.checkOut), new Date(booking.checkIn))} night(s)</p></p>  |
         <p className='flex price items-center justify-center gap-2 text-white bg-primary  px-4 rounded-lg'><ImPriceTags/> <span>${booking.price}</span></p>  
         </div>
-         <div className='absolute  bottom-[0.7px] right-2'>
+         <div className='absolute paidStatus bottom-[0.7px] right-2'>
             { booking.status && booking.status =="Paid" ?(<div className='bg-green-800 paid text-white py-1 px-4 flex items-center gap-1 rounded-lg'><span>Paid</span><span><BsFillPatchCheckFill/></span></div> ):(<div className='bg-primary  text-white py-1 px-4 flex items-center gap-1 rounded-lg notPaid'><span>Not Paid</span><span><MdOutlineCancel/></span></div>)}
             
          </div>

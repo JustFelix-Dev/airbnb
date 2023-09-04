@@ -286,6 +286,16 @@ button.primary{
       text-overflow: ellipsis;
       white-space: nowrap;
      }
+     .dateParent{
+      flex-direction: column;
+     }
+     .diatrics{
+      display: none;
+     }
+     .paidStatus{
+      right:0;
+      left: 2;
+     }
   }
 
   @media screen and (max-width:600px){
