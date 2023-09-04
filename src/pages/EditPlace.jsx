@@ -138,7 +138,7 @@ const EditPlace = () => {
                             <label className='bg-transparent cursor-pointer flex justify-center items-center gap-2 border border-gray-200 rounded-lg text-lg p-4 '>
                                 <input type="file" multiple className='hidden' onChange={uploadFile}/>
                                 <SlCloudUpload/>Upload</label>
-                        </div>
+                        </div> <br />
                         <label htmlFor="description">Description:</label>
                         <textarea name="" id="" cols="30" rows="10" 
                         placeholder='Enter your description...'
@@ -146,7 +146,7 @@ const EditPlace = () => {
                         onChange={(e)=>setDescription(e.target.value)}
                         ></textarea>
                            <Perks selected={perks} onChange={setPerks}/>
-
+                            <br />
                            <label htmlFor="extraInfo">Other Informations:</label>
                              <textarea name="extraInfo" id="extraInfo" 
                              cols="30" rows="10"
