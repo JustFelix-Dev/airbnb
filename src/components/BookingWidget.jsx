@@ -28,6 +28,11 @@ const BookingWidget = ({place}) => {
 
     const handleBooking=async()=>{
              setIsLoading(true)
+             if(checkIn == checkOut){
+               toast.error('Dates are invalid!')
+               setIsLoading(false)
+               return;
+             }
         const formBody = {
               place:place._id,checkIn,checkOut,
               numOfGuests:guestNum,fullName,mobile,
