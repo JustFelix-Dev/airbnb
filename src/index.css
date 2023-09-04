@@ -265,11 +265,13 @@ button.primary{
   @media screen and (max-width:778px){
     .bookingList{
       flex-direction: column;
+      gap: 1;
     }
     .placeImage{
-      /* justify-content: center;
-      align-items: center; */
       align-self: center;
+    }
+    .placeDetails{
+      padding-left: 1rem;
     }
   }
   @media screen and (max-width:850px){

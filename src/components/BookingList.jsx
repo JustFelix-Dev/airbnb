@@ -46,7 +46,7 @@ const BookingList = () => {
                             <div className='w-48 p-4 placeImage'>
                                 <PlacesImage place={booking.place}/>
                             </div>
-                            <div className='py-3 pr-3 grow'>
+                            <div className='py-3 pr-3 placeDetails grow'>
                                 <h2 className='placetitle text-xl'>{booking?.place?.title}</h2>
                                  <BookingDate booking={booking}/>
                                 </div>
