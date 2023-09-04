@@ -42,7 +42,7 @@ const BookingList = () => {
                <div>
                  {
                     bookings?.map(booking=>(
-                        <Link to={`/account/bookings/${booking._id}`} className='flex relative  m-4 gap-4 bg-gray-200 rounded-lg overflow-hidden'>
+                        <Link to={`/account/bookings/${booking._id}`} className='flex relative bookingList  m-4 gap-4 bg-gray-200 rounded-lg overflow-hidden'>
                             <div className='w-48 p-4'>
                                 <PlacesImage place={booking.place}/>
                             </div>

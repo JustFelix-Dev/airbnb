@@ -262,6 +262,11 @@ button.primary{
       font-size: 0.85rem;
     }
   }
+  @media screen and (max-width:778px){
+    .bookingList{
+      flex-direction: column;
+    }
+  }
   @media screen and (max-width:850px){
     .policies{
       flex-direction: column;
