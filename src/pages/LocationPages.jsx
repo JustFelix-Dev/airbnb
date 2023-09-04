@@ -152,7 +152,7 @@ const LocationPages = () => {
                             <button onClick={addPhotoByLink} className='bg-primary text-white rounded-md px-2'>Add&nbsp;Photo</button>
                         </div>
 
-                        <div className="mt-2 grid gap-2 grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                        <div className="mt-2 grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
                             {
                               photos.length > 0 && photos.map((link,idx)=>(
                                 <div className='h-32  relative flex' key={idx}>
@@ -173,6 +173,7 @@ const LocationPages = () => {
                                 <input type="file" multiple className='hidden' onChange={uploadFile}/>
                                 <SlCloudUpload/>Upload</label>
                         </div>
+                        <br />
                         <label htmlFor="description">Description:</label>
                         <textarea name="" id="" cols="30" rows="10" 
                         placeholder='Enter your description...'
@@ -180,7 +181,7 @@ const LocationPages = () => {
                         onChange={(e)=>setDescription(e.target.value)}
                         ></textarea>
                            <Perks selected={perks} onChange={setPerks}/>
-
+                             <br />
                            <label htmlFor="extraInfo">Other Informations:</label>
                              <textarea name="extraInfo" id="extraInfo" 
                              cols="30" rows="10"

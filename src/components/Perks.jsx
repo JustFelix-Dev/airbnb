@@ -22,7 +22,7 @@ const Perks = ({ selected,onChange }) => {
   return (
         <>
          <label htmlFor="perks">What your place has to Offer:</label>
-                        <div className='grid grid-cols-3 gap-3 mx-auto max-w-6xl'>
+                        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-3 mx-auto max-w-6xl'>
                             <label className='flex gap-2 items-center p-3 border border-gray-400 cursor-pointer'  htmlFor="">
                                 <input type='checkbox' checked={selected.includes('wifi')} name='wifi' onChange={handleClick} />
                                 <AiOutlineWifi/>
