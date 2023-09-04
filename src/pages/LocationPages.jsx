@@ -109,7 +109,7 @@ const LocationPages = () => {
                 <Link to={`/account/places/new`} className='inline-flex items-center gap-1 bg-primary mb-4 text-white py-2 px-4 rounded-lg'><ImEyePlus/>Add a New Place</Link>
                  <div className='max-w-7xl mx-auto'>
                     {fetchedPlaces.length > 0 &&  fetchedPlaces.map(place=>(
-                        <div  className="flex relative gap-3 mb-4 transition-all transition- hover:border border-gray-300 rounded-lg bg-gray-100 p-3 w-full">
+                        <div  className="flex relative gap-3 mb-4 transition-all transition- hover:border border-gray-300 rounded-lg bg-gray-100 p-3 ">
                             <div className='flex w-32 bg-gray-300 grow shrink-0'>
                                <PlacesImage place={place}/>
                             </div>
