@@ -65,7 +65,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
              <>
 
             {  user && 
-            <div className='w-full sm:w-[80%] p-4 shadow-2xl rounded-lg mx-auto'>
+            <motion.div initial={{y:20,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1.5}} className='w-full sm:w-[80%] p-4 shadow-2xl rounded-lg mx-auto'>
   <div className="flex profilepage gap-10 p-4 border border-dashed border-primary rounded-xl">
     <div className=' basicInfo  border-primary '>
       <div className='flex justify-center p-4'>
@@ -104,7 +104,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
       )}
     </div>
     <div className='border-primary  displayInfo grow sm:pl-4'>
-      <h1 className='text-2xl font-bold'>Welcome back, <span className='text-primary'>{user.name}!</span></h1>
+      <h1 className='text-xl sm:text-2xl font-bold'>Welcome back, <span className='text-primary'>{user.name}!</span></h1>
       <div className='flex mt-4 items-center justify-between'>
         <div className='flex flex-col gap-6'>
           <div>
@@ -161,8 +161,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
       </div>
     </div>
   </div>
-</div>
-
+            </motion.div>
              }
              </>
      );
