@@ -75,6 +75,7 @@ const BookingWidget = ({place}) => {
                 />
                 <label htmlFor="guests">Phone Number</label>
                <input type="tel" 
+                inputMode='numeric'
                value={mobile} 
                onChange={(e)=>setMobile(e.target.value)}
                  required
