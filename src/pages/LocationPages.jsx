@@ -114,7 +114,7 @@ const LocationPages = () => {
                                <PlacesImage place={place}/>
                             </div>
                             <div className='grow-0 shrink'>
-                                <h2 className=' w-[200px] border text-lg sm:text-xl truncate locationTitle'>{place.title}</h2>
+                                <h2 className=' w-[200px]  text-lg sm:text-xl truncate locationTitle'>{place.title}</h2>
                                 <p className='text-sm mt-2 locationDescription h-[50px] overflow-auto'>{place.description}</p>
                             </div>
                             <div className='flex gap-2 relative cursor-pointer' >
