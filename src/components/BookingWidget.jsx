@@ -3,6 +3,7 @@ import {differenceInCalendarDays} from 'date-fns'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { userContext } from '../ContextHook/userContext';
+import { toast } from 'react-toastify';
 
 const BookingWidget = ({place}) => {
     const [ checkIn,setCheckIn ] = useState('');
@@ -75,7 +76,6 @@ const BookingWidget = ({place}) => {
                 />
                 <label htmlFor="guests">Phone Number</label>
                <input type="number" 
-               min={11}
                 inputMode='numeric'
                value={mobile} 
                onChange={(e)=>setMobile(e.target.value)}
