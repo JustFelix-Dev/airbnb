@@ -67,7 +67,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
             {  user && 
             <div className='w-full sm:w-[80%] p-4 shadow-2xl rounded-lg mx-auto'>
   <div className="flex profilepage gap-10 p-4 border border-dashed border-primary rounded-xl">
-    <div className=' order-1 basicInfo  border-primary '>
+    <div className=' basicInfo  border-primary '>
       <div className='flex justify-center p-4'>
         <img 
           src={user && user.photo ? user.photo : 'images/svgexport-7.svg'}
@@ -103,7 +103,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
         </div>
       )}
     </div>
-    <div className='-order-1 border-primary sm:border-none sm:order-2 displayInfo grow sm:pl-4'>
+    <div className='border-primary sm:border-none  displayInfo grow sm:pl-4'>
       <h1 className='text-2xl font-bold'>Welcome back, <span className='text-primary'>{user.name}!</span></h1>
       <div className='flex mt-4 items-center justify-between'>
         <div className='flex flex-col gap-6'>
