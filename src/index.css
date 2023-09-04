@@ -267,8 +267,6 @@ button.primary{
       flex-direction: column;
     }
     .placeImage{
-      text-align: center;
-      margin: 0 auto;
       justify-content: center;
       align-items: center;
     }
