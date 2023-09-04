@@ -252,6 +252,11 @@ button.primary{
       border-bottom: 1px solid rgb(255, 56, 92,0.5);
       padding-bottom: 2.5rem;
     }
+    .locationTitle{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 
   @media screen and (max-width:882px){
