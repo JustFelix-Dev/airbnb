@@ -258,6 +258,12 @@ button.primary{
       flex-direction: column;
     }
   }
+
+  @media screen and (max-width:600px){
+    .profilenav{
+      flex-direction: column;
+    }
+  }
   @media screen and (max-width:520px){
     .bookingpayment{
       flex-direction: column;
