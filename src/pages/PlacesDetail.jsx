@@ -38,7 +38,7 @@ const getWeather=(cityName)=>{
 }
 
 useEffect(()=>{
-  getWeather(place?.address.split(',')[0]);
+  getWeather(place?.address.split(" , ")[0]);
 },[place])
 
 console.log("Weather:",weather)
