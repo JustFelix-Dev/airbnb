@@ -109,14 +109,9 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
       <span className='text-primary'>
          (
           <TypeAnimation
-            text={user?.name}
-            typingDelay={50} 
-            cursor={false} 
+            sequence={[`${user.name}`,1000]} wrapper='span' speed={50}
           />
-        ) : (
-          {user?.name}
-        )
-        !
+        )!
       </span>
     </h1>
       <div className='flex mt-4 items-center justify-between'>
