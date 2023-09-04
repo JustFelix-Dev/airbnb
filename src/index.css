@@ -258,6 +258,9 @@ button.primary{
     .placetitle{
       font-size: 1rem;
     }
+    .formatCheckIn,.formatCheckOut,.days,.price,.paid,.notPaid{
+      font-size: 0.85rem;
+    }
   }
   @media screen and (max-width:850px){
     .policies{
