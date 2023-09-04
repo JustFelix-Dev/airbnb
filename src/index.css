@@ -256,7 +256,7 @@ button.primary{
   @media screen and (max-width:850px){
     .policies{
       flex-direction: column;
-      padding-inline: 20%;
+      margin-inline: 20%;
     }
   }
 
