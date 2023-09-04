@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import { userContext } from '../ContextHook/userContext';
 import { AnimatePresence, motion } from 'framer-motion';
+import TypeAnimation from 'react-type-animation'; 
 
 
 const ProfilePage = ({user,setUser,setRedirected}) => {
@@ -13,6 +14,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
     const [ badgeName,setBadgeName] = useState('');
     const [ maxValue,setMaxValue] = useState('');
     const [ badgeUrl,setBadgeUrl] = useState('');
+    const [typing, setTyping] = useState(true);
     const date = new Date()
     const day = date.getDay()
     const dayList = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -26,6 +28,11 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
           console.log(err.message)
          })
 
+         useEffect(() => {
+          setTimeout(() => {
+            setTyping(false);
+          }, 1000); // Adjust the delay as needed
+        }, []);
 
       if(user.rewardPoint <= 499){
           setBadgeName('Bronze')
@@ -65,7 +72,7 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
              <>
 
             {  user && 
-            <motion.div initial={{y:20,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1.5}} className='w-full sm:w-[80%] p-4 shadow-2xl rounded-lg mx-auto'>
+            <motion.div initial={{y:20,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:0.5}} className='w-full sm:w-[80%] p-4 shadow-2xl rounded-lg mx-auto'>
   <div className="flex profilepage gap-10 p-4 border border-dashed border-primary rounded-xl">
     <div className=' basicInfo  border-primary '>
       <div className='flex justify-center p-4'>
@@ -104,7 +111,21 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
       )}
     </div>
     <div className='border-primary  displayInfo grow sm:pl-4'>
-      <h1 className='text-xl sm:text-2xl font-bold'>Welcome back, <span className='text-primary'>{user.name}!</span></h1>
+    <h1 className='text-xl sm:text-2xl font-bold'>
+      Welcome back,{' '}
+      <span className='text-primary'>
+        {typing ? (
+          <TypeAnimation
+            text={user.name}
+            typingDelay={50} // Adjust typing speed as needed
+            cursor={false} // Hide cursor
+          />
+        ) : (
+          user.name
+        )}
+        !
+      </span>
+    </h1>
       <div className='flex mt-4 items-center justify-between'>
         <div className='flex flex-col gap-6'>
           <div>
