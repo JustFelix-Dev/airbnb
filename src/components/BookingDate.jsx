@@ -13,7 +13,7 @@ const BookingDate = ({ booking }) => {
 
   return (
     <>
-      <div className='relative'>
+      <div className='relative bookingPayment'>
         <div className='flex gap-2 border-t dateParent border-gray-300 mt-2 py-2'>
           <div className='flex items-center formatCheckIn'>
             <FcCalendar /> {formattedCheckInDate} <span className='diatrics'> &rarr;</span>

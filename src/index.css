@@ -292,6 +292,9 @@ button.primary{
      .diatrics{
       display: none;
      }
+     .bookingPayment{
+      position: static;
+     }
      .paidStatus{
       top: 0;
      }
