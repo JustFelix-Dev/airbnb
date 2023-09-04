@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import { userContext } from '../ContextHook/userContext';
 import { AnimatePresence, motion } from 'framer-motion';
-import TypeAnimation from 'react-type-animation'; 
+import {TypeAnimation} from 'react-type-animation'; 
 
 
 const ProfilePage = ({user,setUser,setRedirected}) => {
