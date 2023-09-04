@@ -149,12 +149,12 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
           )}
           {!isLoading && fetchOrders && fetchOrders.length > 0 &&
             fetchOrders.sort((a,b)=>new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()).map((order,idx)=>(
-              <div key={idx} className='flex my-2 fetchedorders gap-2 p-2 rounded-lg'>
+              <div key={idx} className='flex my-2 fetchedorders gap-2 p-2 border border-primary rounded-lg'>
                 <div className='flex '>
                   <img className='object-cover' src={order.orderPhoto} alt="orderImage" width={70} height={30} />
                 </div>
                 <div className='grow'>
-                  <p className='border w-[200px] truncate'>{order.bookingPlace}</p>
+                  <p className=' w-[200px] truncate'>{order.bookingPlace}</p>
                   <div className='flex justify-between'>
                     <span>Status: <span className='bg-green-800 px-2 sm:px-4 text-xs sm:text-sm text-white rounded-md'>{order.payment_status}</span></span>
                     <span>Date: {format(new Date(order.paymentTime * 1000),"dd MMM. ''yy")}</span>
