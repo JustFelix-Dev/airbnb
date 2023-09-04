@@ -107,11 +107,13 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
     <h1 className='text-xl sm:text-2xl font-bold'>
       Welcome back,
       <span className='text-primary'>
-         (
           <TypeAnimation
-            sequence={[`${user.name}`,1000]} wrapper='span' speed={50}
+            sequence={[`${user.name}`,1000]}
+             wrapper='span' 
+             speed={50}
+              cursor={false}
           />
-        )!
+        !
       </span>
     </h1>
       <div className='flex mt-4 items-center justify-between'>
