@@ -265,7 +265,7 @@ button.primary{
   @media screen and (max-width:778px){
     .bookingList{
       flex-direction: column;
-      gap: 1;
+      gap: 0;
     }
     .placeImage{
       align-self: center;
