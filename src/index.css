@@ -269,6 +269,8 @@ button.primary{
     .placeImage{
       text-align: center;
       margin: 0 auto;
+      justify-content: center;
+      align-items: center;
     }
   }
   @media screen and (max-width:850px){
