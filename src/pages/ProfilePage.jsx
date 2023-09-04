@@ -109,12 +109,12 @@ const ProfilePage = ({user,setUser,setRedirected}) => {
       <span className='text-primary'>
          (
           <TypeAnimation
-            text={user.name}
+            text={user?.name}
             typingDelay={50} 
             cursor={false} 
           />
         ) : (
-          {user.name}
+          {user?.name}
         )
         !
       </span>
