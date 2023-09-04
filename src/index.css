@@ -262,6 +262,14 @@ button.primary{
       font-size: 0.85rem;
     }
   }
+  @media screen and (max-width:823px){
+    .locationTitle,.locationDescription{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+  }
   @media screen and (max-width:778px){
     .bookingList{
       flex-direction: column;

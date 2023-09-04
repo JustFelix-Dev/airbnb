@@ -114,8 +114,8 @@ const LocationPages = () => {
                                <PlacesImage place={place}/>
                             </div>
                             <div className='grow-0 shrink'>
-                                <h2 className='text-xl'>{place.title}</h2>
-                                <p className='text-sm mt-2'>{place.description}</p>
+                                <h2 className='text-xl locationTitle'>{place.title}</h2>
+                                <p className='text-sm mt-2 locationDescription'>{place.description}</p>
                             </div>
                             <div className='flex gap-2 relative cursor-pointer' >
                               <div className='absolute right-2' onClick={(e)=>{ if(!confirm("Are you sure you want to delete this location ?")){e.preventDefault()}else{handleDelete(place?._id)}}}>
