@@ -43,7 +43,7 @@ const BookingList = () => {
                  {
                     bookings?.map(booking=>(
                         <Link to={`/account/bookings/${booking._id}`} className='flex relative bookingList  m-4 gap-4 bg-gray-200 rounded-lg overflow-hidden'>
-                            <div className='w-48 p-4'>
+                            <div className='w-48 p-4 placeImage'>
                                 <PlacesImage place={booking.place}/>
                             </div>
                             <div className='py-3 pr-3 grow'>
