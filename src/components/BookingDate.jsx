@@ -27,7 +27,7 @@ const BookingDate = ({ booking }) => {
         <p className='flex price items-center justify-center gap-2 text-white bg-primary  px-4 rounded-lg'><ImPriceTags/> <span>${booking.price}</span></p>  
         </div>
          <div className='absolute paidStatus bottom-[0.7px] right-2'>
-            { booking.status && booking.status =="Paid" ?(<div className='bg-green-800 paid text-white text-center py-1 px-4 flex items-center gap-1 rounded-lg'><span>Paid</span><span><BsFillPatchCheckFill/></span></div> ):(<div className='bg-primary  text-white py-1 px-4 flex items-center gap-1 rounded-lg text-center notPaid'><span>Not Paid</span><span><MdOutlineCancel/></span></div>)}
+            { booking.status && booking.status =="Paid" ?(<div className='bg-green-800 paid text-white text-center justify-center py-1 px-4 flex items-center gap-1 rounded-lg'><span>Paid</span><span><BsFillPatchCheckFill/></span></div> ):(<div className='bg-primary  text-white py-1 px-4 flex items-center justify-center gap-1 rounded-lg text-center notPaid'><span>Not Paid</span><span><MdOutlineCancel/></span></div>)}
             
          </div>
       </div>
