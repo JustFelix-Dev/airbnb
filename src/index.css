@@ -256,13 +256,13 @@ button.primary{
   @media screen and (max-width:850px){
     .policies{
       flex-direction: column;
-      margin-inline: 20%;
     }
   }
 
   @media screen and (max-width:600px){
     .profilenav{
       flex-direction: column;
+      padding-inline: 20%;
     }
   }
   @media screen and (max-width:520px){
