@@ -14,7 +14,7 @@ const PotentialChats = () => {
     }
   return (
        <>
-           <div onClick={showPotentialChats} className='support-services'><img src="/images/support-services.png" alt="icon" height={30} width={30} /></div>
+           <div onClick={showPotentialChats} className='cursor-pointer support-services'><img src="/images/support-services.png" alt="icon" height={30} width={30} /></div>
           <AnimatePresence>
          { 
          showPChats &&  <motion.div exit={{opacity:0,scale:0.9}} initial={{opacity:0,scale:0.9}} animate={{opacity:1,scale:1}} className=" potential-support flex gap-1 mb-2 ml-2">
