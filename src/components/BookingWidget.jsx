@@ -44,6 +44,17 @@ const BookingWidget = ({place}) => {
         navigate(`/account/bookings/${bookingId}`)
     }
 
+    const handleRedirect=()=>{
+      setIsLoading(true)
+      if(checkIn == checkOut){
+        toast.error('Dates are invalid!')
+        setIsLoading(false)
+        return;
+      }
+        navigate('/login')
+        setIsLoading(false)
+    }
+
   return (
           <>
            <div className="bg-white shadow-2xl border-t-2 border-primary p-4 rounded-2xl w-full">
@@ -89,7 +100,7 @@ const BookingWidget = ({place}) => {
            </div>
             )}
             </div>
-            <button onClick={ user ? handleBooking : <Navigate to={'/login'}/> } className="primary"> 
+            <button onClick={ user ? handleBooking : handleRedirect } className="primary"> 
             { !isLoading ?
                <div>
                Reserve
