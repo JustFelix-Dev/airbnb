@@ -18,6 +18,9 @@
 .booking{
   box-shadow: 0 0 0 1000px rgba(0 0 0 /0.1);
 }
+.support-services{
+  display: none;
+}
 
 ::-webkit-progress-bar{
     display: flex;
@@ -256,6 +259,20 @@ button.primary{
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+    }
+    .support-services{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 5px;
+    }
+    .potential-support{
+      flex-direction: column;
+      position: fixed;
+      z-index: 9;
+      height:470px;
+      background-color: white;
+      box-shadow: 0 0 3px 0 #333;
     }
   }
 
