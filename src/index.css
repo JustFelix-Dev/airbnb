@@ -263,14 +263,14 @@ button.primary{
     .support-services{
       display: block;
       position: absolute;
-      top: -8px;
+      top: -11px;
       left: 5px;
     }
     .potential-support{
       flex-direction: column;
       position: fixed;
       z-index: 9;
-      height:470px;
+      height:350px;
       width: 200px;
       padding:.8rem .4rem;
       background-color: white;
