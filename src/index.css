@@ -265,13 +265,13 @@ button.primary{
       position: absolute;
       top: -11px;
       left: 5px;
-      padding-bottom: 6px;
+      margin-bottom: 6px;
     }
     .potential-support{
       flex-direction: column;
       position: fixed;
       z-index: 9;
-      top: 147px;
+      top: 150px;
       /* left: 50px !important; */
       height:350px;
       width: 200px;
