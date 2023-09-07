@@ -80,6 +80,7 @@ function App() {
           <Route path='/forgotPassword' element={<ResetPassword/>}/>
           <Route path='/airbnbPolicies' element={<PoliciesPage/>}/>
           <Route path='/airbnb-faq' element={<FAQAccordion/>}/>
+          <Route path='*' element={<Navigate to={'/'}/>}/>
           </Route>
         </Routes>
         </PlaceContextProvider>
