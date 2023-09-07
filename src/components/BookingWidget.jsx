@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import {differenceInCalendarDays} from 'date-fns'
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { userContext } from '../ContextHook/userContext';
 import { toast } from 'react-toastify';
 
@@ -89,7 +89,7 @@ const BookingWidget = ({place}) => {
            </div>
             )}
             </div>
-            <button onClick={handleBooking} className="primary"> 
+            <button onClick={ user ? handleBooking : <Navigate to={'/login'}/> } className="primary"> 
             { !isLoading ?
                <div>
                Reserve
