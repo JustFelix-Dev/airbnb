@@ -263,7 +263,7 @@ button.primary{
     .support-services{
       display: block;
       position: absolute;
-      top: 0;
+      top: -5px;
       left: 5px;
     }
     .potential-support{
@@ -271,6 +271,7 @@ button.primary{
       position: fixed;
       z-index: 9;
       height:470px;
+      width: 150px;
       background-color: white;
       box-shadow: 0 0 3px 0 #333;
     }
