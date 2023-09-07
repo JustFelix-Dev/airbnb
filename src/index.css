@@ -269,7 +269,6 @@ button.primary{
     .potential-support{
       flex-direction: column;
       position: fixed;
-      top: 10px;
       z-index: 9;
       height:350px;
       width: 200px;
