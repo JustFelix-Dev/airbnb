@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { airbnbFaqs } from '../utils/questions';
+import { Link } from 'react-router-dom';
 
 const ITEMS_PER_PAGE = 3; // Number of FAQs to show per page
 const faqs = airbnbFaqs;
