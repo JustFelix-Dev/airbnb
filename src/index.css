@@ -270,7 +270,7 @@ button.primary{
       flex-direction: column;
       position: fixed;
       z-index: 9;
-      left: -20px;
+      left: 50px;
       height:350px;
       width: 200px;
       padding:.8rem .4rem;
