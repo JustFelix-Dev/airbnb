@@ -35,7 +35,7 @@ const FAQAccordion = () => {
           <div className="mt-2">{faq.answer}</div>
         </div>
       ))}
-        <div className='mx-auto max-w-md text-primary'><Link to='/airbnbPolicies'>Click here for booking info.</Link></div>
+        <div className='mx-auto text-center underline text-primary'><Link to='/airbnbPolicies'>Click here for booking info.</Link></div>
       <div className="flex flex-wrap gap-2 justify-center mt-4">
         {Array.from({ length: totalPages }, (_, index) => (
           <button
