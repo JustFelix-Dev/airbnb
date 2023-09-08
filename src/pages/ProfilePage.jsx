@@ -186,7 +186,7 @@ const ProfilePage = ({ user, setUser, setRedirected }) => {
                   <div>
                     <h1 className="flex items-center gap-1 text-lg font-medium">
                       My Points:
-                      <Link to={"/airbnbPolicies"} className="hover:bg-primary p-2 opacity-50">
+                      <Link to={"/airbnbPolicies"} className="rounded-full hover:bg-gray-400 p-2 hover:opacity-50">
                         <img
                           src="/images/information-button.png"
                           alt="infoButton"
