@@ -75,7 +75,7 @@ function App() {
           <Route path='account/places/edit/:id' element={ user ? <EditPlace/> : <Navigate to={'/login'}/>}/> 
           <Route path='account/:subPage/:id' element={user ? <AccountPage/> : <Navigate to={'/login'}/>}/>
           <Route path='place/:id' element={<PlacesDetail/>}/>
-          <Route path='checkout-success/:id' element={ user ? <CheckOutSuccess/> : <Navigate to={'/login'}/>}/>
+          <Route path='checkout-success/:id' element={<CheckOutSuccess/>}/>
           <Route path='order-status/:id' element={ user ? <OrderStatus/> : <Navigate to={'/login'}/>}/>
           <Route path='/forgotPassword' element={<ResetPassword/>}/>
           <Route path='/airbnbPolicies' element={<PoliciesPage/>}/>
