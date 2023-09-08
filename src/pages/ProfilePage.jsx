@@ -184,20 +184,17 @@ const ProfilePage = ({ user, setUser, setRedirected }) => {
                     />
                   </div>
                   <div>
-                  <Link to={"/airbnbPolicies"}>
-                  <div className="relative inline-block group">
-                    <img
-                      src="/images/information-button.png"
-                      alt="infoButton"
-                      height={12}
-                      width={12}
-                      className="h-12 w-12 transition-opacity duration-300 group-hover:opacity-75"
-                    />
-                    <div className="hidden group-hover:block bg-gray-800 text-white text-sm p-2 rounded absolute top-full left-1/2 transform -translate-x-1/2 translate-y-2 opacity-0 transition-opacity duration-300">
-                      Info
-                    </div>
-                  </div>
-                </Link>
+                    <h1 className="flex items-center gap-1 text-lg font-medium">
+                      My Points:
+                      <Link to={"/airbnbPolicies"} className="hover:bg-primary p-2 opacity-50">
+                        <img
+                          src="/images/information-button.png"
+                          alt="infoButton"
+                          height={12}
+                          width={12}
+                        />
+                      </Link>
+                    </h1>
                     <span>
                       {user.rewardPoint}/{maxValue}
                     </span>{" "}
