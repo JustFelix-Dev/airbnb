@@ -22,7 +22,7 @@ const IndexPage = () => {
 
   const handleClick=(currentPlace)=>{
    const filteredPlace = allPlaces.filter((place)=>{
-     currentPlace === place._id
+     currentPlace !== place._id
    })
    console.log(filteredPlace)
   }
