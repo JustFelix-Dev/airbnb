@@ -78,7 +78,7 @@ const IndexPage = () => {
             ))}
            
         </motion.div>
-         <div className="border w-full border-primary flex items-center justify-center p-2">
+         <div className=" w-full flex items-center justify-center p-2">
          <div className="scene">
            <div className="cube">
              <span className="side top">Thank You😊</span>
