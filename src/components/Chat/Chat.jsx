@@ -48,6 +48,7 @@ const Chat = () => {
     <>
       <AnimatePresence>
         {showChat && (
+            <div className="relative">
           <motion.div
             exit={{ y: 50, opacity: 0, scale: 0 }}
             initial={{ y: 50 }}
@@ -149,6 +150,7 @@ const Chat = () => {
               </Link>
             </div>
           </motion.div>
+          </div>
         )}
       </AnimatePresence>
       <img
