@@ -75,6 +75,12 @@ const IndexPage = () => {
                 </div>
               </Link>
             ))}
+            <div className="scene">
+              <div className="cube">
+                <span className="side top">Thank You😊</span>
+                <span className="side front">Load More</span>
+              </div>
+            </div>
         </motion.div>
       )}
     </>
