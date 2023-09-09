@@ -47,6 +47,7 @@ const IndexPage = () => {
       </AnimatePresence>
 
       {!loading && (
+        <>
         <motion.div
           variants={renderOnce ? placesVariants : {}}
           initial="hidden"
@@ -75,16 +76,17 @@ const IndexPage = () => {
                 </div>
               </Link>
             ))}
-            <div className="border w-full border-primary flex items-center justify-center p-2">
-            <div className="scene">
-              <div className="cube">
-                <span className="side top">Thank You😊</span>
-                <span className="side front">Load More</span>
-              </div>
-            </div>
-            </div>
            
         </motion.div>
+         <div className="border w-full border-primary flex items-center justify-center p-2">
+         <div className="scene">
+           <div className="cube">
+             <span className="side top">Thank You😊</span>
+             <span className="side front">Load More</span>
+           </div>
+         </div>
+         </div>
+         </>
       )}
     </>
   );
