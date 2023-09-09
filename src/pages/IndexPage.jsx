@@ -21,6 +21,7 @@ const IndexPage = () => {
   }, []);
 
   const handleClick=(currentPlace)=>{
+    alert(currentPlace)
     allPlaces.map((place)=>{
       if(currentPlace === place._id){
         setClicked(!clicked)
