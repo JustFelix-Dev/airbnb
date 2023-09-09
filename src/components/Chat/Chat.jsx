@@ -104,7 +104,9 @@ const Chat = () => {
                         width={17}
                       />
                     </div>
+                    <div className="relative">
                     <PotentialChats />
+                    </div>
                     {userChats?.length < 1 ? null : (
                       <div className="flex flex-col">
                         {isUserChatsLoading && (
