@@ -13,8 +13,7 @@ const SlideShow = ({ images }) => {
   }, [images]);
 
   return (
-      <img src={images[currentIndex]} alt={`Image ${currentIndex}`}  className={`rounded-xl object-cover aspect-square transition-opacity duration-500 ${
-              index === currentIndex ? "opacity-100" : "opacity-0"} `}/>
+      <img src={images[currentIndex]} alt={`Image ${currentIndex}`}  className={`rounded-xl object-cover aspect-square transition-all duration-500 `}/>
   
   );
 };
