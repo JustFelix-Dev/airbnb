@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { PlaceContext } from "../ContextHook/placeContext";
 import { AnimatePresence, motion } from "framer-motion";
+import SlideShow from "../components/SlideShow";
 
 const IndexPage = () => {
   const { allPlaces, error, loading } = useContext(PlaceContext);
