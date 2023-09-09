@@ -21,16 +21,10 @@ const IndexPage = () => {
   }, []);
 
   const handleClick=(currentPlace)=>{
-    alert(currentPlace)
-    allPlaces.map((place)=>{
-      if(currentPlace === place._id){
-        setClicked(!clicked)
-        toast.success('Added to Favorites')
-      }else{
-        return;
-      }
-    })
-  
+   const filteredPlace = allPlaces.filter((place)=>{
+     currentPlace === place._id
+   })
+   console.log(filteredPlace)
   }
 
   const placesVariants = {
