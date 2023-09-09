@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { PlaceContext } from "../ContextHook/placeContext";
 import { AnimatePresence, motion } from "framer-motion";
 import SlideShow from "../components/SlideShow";
+import { toast } from "react-toastify";
 
 const IndexPage = () => {
   const { allPlaces, error, loading } = useContext(PlaceContext);
@@ -19,8 +20,16 @@ const IndexPage = () => {
     }
   }, []);
 
-  const handleClick=()=>{
-    setClicked(!clicked)
+  const handleClick=(currentPlace)=>{
+    allPlaces.map((place)=>{
+      if(currentPlace === place._id){
+        setClicked(!clicked)
+        toast.success('Added to Favorites')
+      }else{
+        return;
+      }
+    })
+  
   }
 
   const placesVariants = {
@@ -65,13 +74,13 @@ const IndexPage = () => {
         >
           {allPlaces?.length > 0 &&
             allPlaces.map((place, idx) => (
-              <div className="relative">
-              <div onClick={handleClick} className=" absolute p-1 z-10 cursor-grab right-2 top-2">
+              <div key={idx} className="relative">
+              <div onClick={()=> handleClick(place._id)} className=" absolute p-1 z-10 cursor-grab right-2 top-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-[13px] h-[13px] " fill={ clicked ? '#ff385c' : 'none'} viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
               </svg>
               </div>
-              <Link key={idx} to={"/place/" + place._id} className="relative" >
+              <Link  to={"/place/" + place._id} className="relative" >
                
                 <div className="bg-gray-500 mb-2 rounded-2xl flex">
                 <SlideShow images={place?.photos}/>
