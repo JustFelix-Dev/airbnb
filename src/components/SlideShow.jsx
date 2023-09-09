@@ -16,9 +16,7 @@ const SlideShow = ({ images }) => {
     <img
     src={images[currentIndex]}
     alt={`Image ${currentIndex}`}
-    className={`rounded-xl object-cover aspect-square transition-opacity duration-500 ${
-      currentIndex === currentIndex ? 'opacity-100' : 'opacity-0'
-    }`}
+    className={`rounded-xl object-cover aspect-square transition-all duration-500 `}
   />
   
   );
