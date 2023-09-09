@@ -320,9 +320,9 @@ button.primary {
     flex-direction: column;
     position: fixed;
     z-index: 9;
-    top: 150px;
+    top: 200px;
     /* left: 50px !important; */
-    height: 350px;
+    height: 250px;
     width: 200px;
     padding: 0.8rem 0.4rem;
     background-color: white;
