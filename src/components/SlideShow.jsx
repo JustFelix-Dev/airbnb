@@ -5,11 +5,10 @@ const SlideShow = ({ images }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Increment the index to show the next image
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000); // Change image every 3 seconds (adjust as needed)
+    }, 10000);
 
-    return () => clearInterval(interval); // Clean up the interval
+    return () => clearInterval(interval); 
   }, [images]);
 
   return (
