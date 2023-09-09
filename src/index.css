@@ -13,19 +13,6 @@
   @apply bg-black;
 }
 
-/* SlideShow */
-/* .slideshow {
-  position: relative;
-  width: 100%;
-  max-width: 600px; /* Adjust the maximum width as needed */
-  /* overflow: hidden; */
-
-
-/* .slideshow img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.5s ease-in-out;
-} */ 
 
 /* custom */
 .booking {
