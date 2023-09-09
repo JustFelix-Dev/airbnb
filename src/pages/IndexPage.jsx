@@ -3,7 +3,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { PlaceContext } from "../ContextHook/placeContext";
 import { AnimatePresence, motion } from "framer-motion";
-import SlideShow from "../components/SlideShow";
 
 const IndexPage = () => {
   const { allPlaces, error, loading } = useContext(PlaceContext);
@@ -62,7 +61,7 @@ const IndexPage = () => {
             allPlaces.map((place, idx) => (
               <Link key={idx} to={"/place/" + place._id}>
                 <div className="bg-gray-500 mb-2 rounded-2xl flex">
-                  <SlideShow images={place?.photos}/>
+                <SlideShow images={place?.photos}/>
                 </div>
                 <h2 className="font-bold truncate">{place.address}</h2>
                 <h3 className="text-sm text-gray-500 truncate">{place.title}</h3>

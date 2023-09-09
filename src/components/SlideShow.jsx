@@ -13,9 +13,7 @@ const SlideShow = ({ images }) => {
   }, [images]);
 
   return (
-    <div className="slideshow">
-      <img src={images[currentIndex]} alt={`Image ${currentIndex}`} />
-    </div>
+      <img src={images[currentIndex]} alt={`Image ${currentIndex}`}  className='rounded-xl object-cover aspect-square'/>
   );
 };
 
