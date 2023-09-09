@@ -75,12 +75,15 @@ const IndexPage = () => {
                 </div>
               </Link>
             ))}
+            <div className="flex items-center justify-center p-2">
             <div className="scene">
               <div className="cube">
                 <span className="side top">Thank You😊</span>
                 <span className="side front">Load More</span>
               </div>
             </div>
+            </div>
+           
         </motion.div>
       )}
     </>
