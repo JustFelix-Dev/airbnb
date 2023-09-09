@@ -7,7 +7,7 @@ const SlideShow = ({ images }) => {
     const interval = setInterval(() => {
       // Increment the index to show the next image
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds (adjust as needed)
+    }, 6000); // Change image every 3 seconds (adjust as needed)
 
     return () => clearInterval(interval); // Clean up the interval
   }, [images]);
