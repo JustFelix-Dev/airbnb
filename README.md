@@ -9,6 +9,9 @@ This section provides an overview of the front-end of the AirBnB application, wh
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 
+![AirBnB Screenshot](https://res.cloudinary.com/dljgkzwfz/image/upload/v1694427320/Github%20ReadMe%20Screenshots/Screenshot_73_hdcphh.png)
+  
+
 ## Project Structure
 
 The front-end of AirBnB is organized as follows:
@@ -68,9 +71,6 @@ The front-end of AirBnB is primarily built with the following technologies:
 - React-Router.
 - react-typewriter.
 - TailwindCSS e.t.c.
-
-
-![AirBnB Screenshot](https://res.cloudinary.com/dljgkzwfz/image/upload/v1694427320/Github%20ReadMe%20Screenshots/Screenshot_73_hdcphh.png)
 
 
 
