@@ -22,6 +22,7 @@ The front-end of AirBnB is organized as follows:
 - **`public/`**: Static assets that will be copied as-is to the build directory.
 - **`package.json`**: Contains project dependencies and scripts.
 
+
 ## Features
 **New Features:**
 
