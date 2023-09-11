@@ -1,7 +1,28 @@
-#  Full-Stack Booking Application
+# AirBnB - Front-End
 
-A comprehensive booking application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack with React and Vite. It provides a seamless platform for users to book various saccomodation/places. Whether you're a business owner looking to manage bookings or a user in search of hassle-free reservations, AirBnB has you covered.
+This section provides an overview of the front-end of the AirBnB application, which is built with React and Vite.
 
+## Table of Contents
+
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+
+## Project Structure
+
+The front-end of AirBnB is organized as follows:
+
+- **`src/`**: Contains the main source code for the React front-end.
+  - **`components/`**: React components used throughout the application.
+  - **`assets/`**: Images, stylesheets, and other static assets.
+  - **`utils/`**: Utility functions or helper scripts.
+  - **`App.jsx`**: The main application component.
+  - **`main.jsx`**: Entry point for the React application.
+- **`public/`**: Static assets that will be copied as-is to the build directory.
+- **`package.json`**: Contains project dependencies and scripts.
+
+## Features
 **New Features:**
 
 - **Mobile-App Behavior:** Built and configured as a Progressive Web Application(PWA) so users can install the application for quick navigation and accessiblity.
@@ -19,40 +40,34 @@ A comprehensive booking application built using the MERN (MongoDB, Express.js, R
 - **Admin Dashboard:** A comprehensive admin dashboard for businesses to manage bookings and services.
 - **Responsive Design:** Fully responsive design to ensure a seamless experience on all devices.
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Screenshots/Demo](#screenshots-demo)
-
-
 ## Installation
 
-To get started with AirBnB, follow these steps:
+Before proceeding, ensure that you have completed the [general installation steps](../README.md#installation).
 
-1. Clone the repository:
+To install and run only the front-end of AirBnB:
 
-   ```bash
-   git clone https://github.com/JustFelix-Dev/mern-airBnB-app.git
-
-2. Navigate to Client Directory :
+1. Navigate to the client directory:
    ```bash
    cd client
-3. Install Client Dependencies :
+2. Install the client dependencies :
    ```bash
    npm install
+3. Start the development server :
+   ```bash
+   npm run dev
 
-## Usage
-To run AirBnB, use the following commands:
+This will launch the development server, and you can access the front-end at http://localhost:5173 in your web browser.
 
-1. Start the client :
-    ```bash
-    cd client
-    npm run dev
 
-Visit http://localhost:5173 in your web browser to access the application.
+## Technologies Used
+The front-end of AirBnB is primarily built with the following technologies:
+
+- React.js with Vite: A modern, fast build tool for React applications.
+- Framer Motion.
+- React-Router.
+- react-typewriter.
+- TailwindCSS e.t.c.
+
 
 ![AirBnB Screenshot](https://res.cloudinary.com/dljgkzwfz/image/upload/v1694427320/Github%20ReadMe%20Screenshots/Screenshot_73_hdcphh.png)
 
